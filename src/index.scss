@@ -1,0 +1,155 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@mixin cards {
+  display: none;
+  position: absolute;
+  width: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 10px;
+  transition: opacity 0.3s ease;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+@mixin Picture {
+  position: absolute;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  background-color: rgba(0, 0, 0, 0.281);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: flex-start;
+  padding: 20px;
+  flex-direction: column;
+  gap: 5px;
+  color: #fff;
+  text-align: center;
+  opacity: 0;
+  cursor: pointer;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  min-width: 320px;
+  min-height: 100vh;
+  font-family: "Caveat", cursive;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+
+li:hover {
+  border-radius: 18px;
+  background: #000000e8;
+  color: #ffffff;
+}
+.ulFooterStyle:hover {
+  border-radius: 18px;
+  color: #000000e8;
+}
+
+.Cards:hover {
+  transform: scale(1.05);
+}
+
+.AboutWorkExperienceBox:hover {
+  transform: scale(1.05);
+}
+
+.Description {
+  @include cards();
+  bottom: 0px;
+  left: 10px;
+  text-overflow: ellipsis;
+  white-space: wrap;
+  height: 5ch;
+  width: auto;
+  max-width: 31.5ch;
+  overflow: hidden;
+}
+.Button {
+  @include cards();
+  cursor: pointer;
+  bottom: 90px;
+  left: 10px;
+  border: none;
+}
+
+.Cards img {
+  transition: opacity 0.3s;
+}
+
+.Cards:hover img {
+  opacity: 0.9;
+}
+
+.Cards:hover .Button,
+.Cards:hover .Description {
+  display: block;
+}
+
+.PictureMeDescription {
+  @include Picture();
+  bottom: 0;
+  left: 0;
+}
+.PictureMeDescription:hover {
+  opacity: 1;
+}
+
+.PictureMeDescriptionSpan {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.74);
+  padding: 10px;
+}
+.icon {
+  cursor: pointer;
+  padding: 2px;
+}
+.icon.active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #734c4c;
+  border: 1px solid white;
+  border-radius: 2px;
+}
+
+.btnCv {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.Cv {
+  border: 1px solid #734c4c;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: ease-in-out 0.4s;
+}
+.Cv:hover {
+  background-color: rgba(0, 0, 0, 0.74);
+  color: white;
+  transform: scale(1.05);
+}
