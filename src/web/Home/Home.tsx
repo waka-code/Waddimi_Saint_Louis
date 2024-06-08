@@ -11,7 +11,6 @@ import { ucMediaQuery } from "../../designs/mediaQuery/hook";
 const Work = () => {
   const { divStyles, h1Styles, h2Styles, pStyles, divContainer } =
     ucHomeStyles();
-    
   const { projects, projectsInProgres } = ucHome();
   const { CurriculumVitae } = ucTestData();
   const { resources } = ucTranslation();
