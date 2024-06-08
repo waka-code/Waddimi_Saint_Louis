@@ -1,5 +1,5 @@
 import React, { Suspense } from 'react';
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { HashRouter , Route, Routes } from "react-router-dom";
 import { Header } from "./web/Header/Header";
 import { Footer } from "./web/PagionFoot/Footer";
 
@@ -10,7 +10,7 @@ const Skills = React.lazy(() => import('./web/Skills/Skills'));
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter >
       <Header />
       <Suspense fallback={<div>Loading...</div>}>
         <Routes>
@@ -21,7 +21,7 @@ function App() {
         </Routes>
       </Suspense>
       <Footer />
-    </BrowserRouter>
+    </HashRouter >
   );
 }
 
