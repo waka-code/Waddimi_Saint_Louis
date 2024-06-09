@@ -12,9 +12,6 @@ type WorkExperienceProps = {
   Digitador: JobDetails;
 };
 
-
-
-
 const About = () => {
   const { styles } = AboutStyles();
   const { resources } = ucTranslation();

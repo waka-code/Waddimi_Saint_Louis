@@ -89,11 +89,7 @@ export const ProjectDisplay: React.FC<ProjectDisplayProps> = ({
   });
 
   const width = useMemo(() => {
-    if (gridTemplateColumns === "repeat(3, 1fr)") {
-      return "450px";
-    } else {
-      return "550px";
-    }
+   return gridTemplateColumns === "repeat(3, 1fr)" ? "450px" : "550px";
   }, [gridTemplateColumns]);
 
   return (
