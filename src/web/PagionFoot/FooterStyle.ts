@@ -9,6 +9,10 @@ export const ucFooterStyles = () => {
 
   const ulFooterStyle = {
     cursor: "pointer",
+    color: "white",
+    textDecoration: "none",
+    display: "flex",
+    padding: "5px",
   };
   
   return {

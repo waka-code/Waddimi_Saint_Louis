@@ -6,6 +6,7 @@ export function ucPortfolioStyle() {
     overflow: "hidden",
     borderRadius: "10px",
     cursor: "pointer",
+    padding: "20px",
   };
 
   const portfolioGrid: React.CSSProperties = {
@@ -13,8 +14,12 @@ export function ucPortfolioStyle() {
     borderRadius: "10px",
     padding: "5px 0",
     transition: "all 0.6s ease",
-    boxShadow: "0 8px 32px 0 #141414",
+    boxShadow: "0 5px 8px 0 #141414",
     position: "relative",
+    border: "2px solid #141414",
+    height: "40vh",
+    display: "flex",
+    alignItems: "center",
   };
 
   const portfolioImg: React.CSSProperties = {
@@ -34,11 +39,14 @@ export function ucPortfolioStyle() {
     alignItems: "center",
   };
 
+  const imgStyle: React.CSSProperties = {borderRadius: "10px", objectFit: "cover"}
+
   return {
     portfolioStyle,
     portfolioGrid,
     portfolioImg,
     portfolioContainer,
     portfolioDiv,
+    imgStyle
   };
 }

@@ -12,7 +12,7 @@ type WorkExperienceProps = {
   Digitador: JobDetails;
 };
 
-const About = () => {
+const ProfessionalJourney = () => {
   const { styles } = AboutStyles();
   const { resources } = ucTranslation();
   const { jobDescriptions, workExperience, imageFiles } = ucTestData();
@@ -22,12 +22,12 @@ const About = () => {
       <div data-aos="fade-down">
         <span style={styles.descriptionH2}>{resources.IamLouis}</span>
       </div>
-      <AboutMe {...styles.aboutMe} />
+      <PersonalProfileSection {...styles.aboutMe} />
       <WorkExperience
         workExperience={workExperience}
         {...styles.workExperience}
       />
-      <PictureMe
+      <ProfileShowcase
         jobDescriptions={jobDescriptions}
         imageFiles={imageFiles}
         {...styles.pictureMe}
@@ -36,8 +36,8 @@ const About = () => {
   );
 };
 
-export default About;
-const AboutMe = ({
+export default ProfessionalJourney;
+const PersonalProfileSection = ({
   container,
   description,
   imgContainer,
@@ -93,7 +93,7 @@ const WorkExperience = ({
   );
 };
 
-const PictureMe = ({
+const ProfileShowcase = ({
   jobDescriptions,
   imageFiles,
   container,

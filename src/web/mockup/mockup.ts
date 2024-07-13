@@ -3,6 +3,7 @@ import picture00 from "../../img/picture00.png";
 import waddyImg from "../../img/waddyImg.png";
 import WaddimiSaintLouisCv_ from "../../cv/WaddimiSaintLouisCv_.pdf";
 import { ucTranslation } from "../../Translation/resources";
+import noDisponible from "../../img/noDisponible.png"
 
 type Icon = {
   title: string;
@@ -24,31 +25,31 @@ export const ucTestData = () => {
  
   const projects: ProjectProps[] = [
     {
-      url: "/SinRutas",
-      img: "https://via.placeholder.com/350",
+      url: "/",
+      img: noDisponible,
     },
     {
-      url: "/SinRutas",
-      img: "https://via.placeholder.com/350",
+      url: "/",
+      img: noDisponible,
     },
     {
-      url: "/SinRutas",
-      img: "https://via.placeholder.com/350",
+      url: "/",
+      img: noDisponible,
     },
     {
-      url: "/SinRutas",
-      img: "https://via.placeholder.com/350",
+      url: "/",
+      img: noDisponible,
     },
   ];
 
   const projectsInProgres: ProjectProps[] = [
     {
       url: "/SinRutas",
-      img: "https://via.placeholder.com/500",
+      img: noDisponible,
     },
     {
       url: "/SinRutas",
-      img: "https://via.placeholder.com/500",
+      img: noDisponible,
     },
   ];
   //footer
@@ -59,7 +60,7 @@ export const ucTestData = () => {
     },
     {
       name: "LinkedIn",
-      url: "https://www.linkedin.com/in/waddimi-saint-louis-b49424230/?trk=opento_sprofile_goalscard",
+      url: "https://www.linkedin.com/in/waddimi-saint-louis-b49424230/",
     },
     {
       name: "instagram",
@@ -115,28 +116,28 @@ export const ucTestData = () => {
   };
   const portfolio: ProjectProps[] = [
     {
-      url: "A",
-      img: "https://via.placeholder.com/500",
+      url: "/portfolio",
+      img: noDisponible,
     },
     {
-      url: "B",
-      img: "https://via.placeholder.com/500",
+      url: "/portfolio",
+      img: noDisponible,
     },
     {
-      url: "C",
-      img: "https://via.placeholder.com/500",
+      url: "/portfolio",
+      img: noDisponible,
     },
     {
-      url: "A",
-      img: "https://via.placeholder.com/500",
+      url: "/portfolio",
+      img: noDisponible,
     },
     {
-      url: "B",
-      img: "https://via.placeholder.com/500",
+      url: "/portfolio",
+      img: noDisponible,
     },
     {
-      url: "C",
-      img: "https://via.placeholder.com/500",
+      url: "/portfolio",
+      img: noDisponible,
     },
   ];
 

@@ -30,9 +30,10 @@ export const Header = () => {
           position: "fixed",
           top: "3%",
           right: "3%",
-          border: "1px solid black",
+          border: "1px solid rgba(0, 0, 0, 0.24)",
           boxShadow: "0px 0px 10px 0px rgba(0, 0, 0, 0.24)",
           zIndex: 1000,
+          borderRadius: "5%",
         }}
       >
         {lang.map((i, idx) => {
@@ -42,13 +43,19 @@ export const Header = () => {
               onClick={() => {
                 handleLanguage(i);
               }}
-              className="btnCv"
               style={{
                 backgroundColor:
-                  language === i ? "rgba(0, 0, 0, 0.74)" : "transparent",
+                  language === i ? "rgba(0, 0, 0, 0.44)" : "transparent",
                 color: language === i ? "white" : "black",
-                padding: "9px",
-                width: "50px",
+                width: "40px",
+                border: "none",
+                fontSize: "25px",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                height: "40px",
+                cursor: "pointer",
+                transition: "background-color 0.5s ease, color 0.5s ease",
               }}
             >
               <text

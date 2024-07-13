@@ -26,7 +26,8 @@ export function AboutStyles() {
         height: "600px",
         borderRadius: "10px",
         overflow: "hidden",
-        boxShadow: "0 8px 32px 0 #141414",
+        boxShadow: "0 5px 8px 0 #141414",
+        border: "2px solid #141414",
         position: "relative" as "relative",
       },
       img: {
@@ -39,7 +40,8 @@ export function AboutStyles() {
       box: {
         padding: "10px",
         borderRadius: "10px",
-        boxShadow: "0 8px 32px 0 #141414",
+        boxShadow: "0 5px 8px 0 #141414",
+        border: "2px solid #141414",
         backgroundColor: "#141414",
         width: "350px",
         height: "250px",
@@ -70,7 +72,8 @@ export function AboutStyles() {
         borderRadius: "10px",
         padding: "40px",
         backgroundColor: "#141414",
-        boxShadow: "0 8px 32px 0 #141414",
+        boxShadow: "0 5px 8px 0 #141414",
+        border: "2px solid #141414",
       },
       picture: {
         display: "flex",
@@ -82,7 +85,8 @@ export function AboutStyles() {
       div: {
         borderRadius: "10px",
         overflow: "hidden",
-        boxShadow: "0 8px 32px 0 #141414",
+        boxShadow: "0 5px 8px 0 #141414",
+        border: "2px solid #141414",
         position: "relative" as "relative",
       },
       img: {

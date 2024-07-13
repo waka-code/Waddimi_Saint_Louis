@@ -30,6 +30,7 @@ export function ucTranslation() {
     measurementIsTheFirst: t("measurementIsTheFirst"),	
     theArtOfDebugging: t("theArtOfDebugging"),	
     debugging: t("debugging"),
+    unavailable: t("unavailable"),	
   };
   return { resources };
 }

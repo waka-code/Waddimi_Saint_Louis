@@ -8,7 +8,7 @@ import { ucTestData } from "../mockup/mockup";
 import { ucTranslation } from "../../Translation/resources";
 import { ucMediaQuery } from "../../designs/mediaQuery/hook";
 
-const Work = () => {
+const PortfolioOverview = () => {
   const { divStyles, h1Styles, h2Styles, pStyles, divContainer } =
     ucHomeStyles();
   const { projects, projectsInProgres } = ucHome();
@@ -54,13 +54,13 @@ const Work = () => {
 
         <h2 style={h2Styles}>{resources.welcomeAWakacode}</h2>
         <p style={pStyles}>{resources.wakaCode}</p>
-        <ProjectDisplay projects={projects} gridTemplateColumns={undefined} />
+        <DynamicProjectGrid projects={projects} gridTemplateColumns={undefined} />
       </div>
       {/* Sección en progreso */}
       <div style={divStyles}>
         <h2 style={h2Styles}>{resources.inProgress}</h2>
         <p style={pStyles}>{resources.listOfOngoingProjects}</p>
-        <ProjectDisplay
+        <DynamicProjectGrid
           projects={projectsInProgres}
           gridTemplateColumns={undefined}
         />
@@ -69,9 +69,9 @@ const Work = () => {
   );
 };
 
-export default Work;
+export default PortfolioOverview;
 
-export const ProjectDisplay: React.FC<ProjectDisplayProps> = ({
+export const DynamicProjectGrid: React.FC<ProjectDisplayProps> = ({
   projects,
   isPortfolio,
   gridTemplateColumns,
@@ -79,7 +79,7 @@ export const ProjectDisplay: React.FC<ProjectDisplayProps> = ({
   const navigate = useNavigate();
   const { resources } = ucTranslation();
   const { divStyles, projectGrid } = ucProjectDisplayStyles();
-  const { portfolioStyle, portfolioGrid, portfolioImg } = ucPortfolioStyle();
+  const { portfolioStyle, portfolioGrid, portfolioImg, imgStyle} = ucPortfolioStyle();
 
   const { hoverCards } = ucScrollHover({
     ulScroolYStyle: undefined,
@@ -106,16 +106,17 @@ export const ProjectDisplay: React.FC<ProjectDisplayProps> = ({
           onClick={() => navigate(project.url)}
           style={isPortfolio ? { ...portfolioGrid, width } : projectGrid}
           className="Cards"
+          
         >
           <img
             src={project.img}
             alt="proyecto"
-            style={isPortfolio ? portfolioImg : undefined}
+            style={isPortfolio ? portfolioImg : imgStyle}
           />
-          <button className="Button" onClickCapture={() => alert("hola")}>
+          <button className="Button" onClickCapture={() => alert("Aun no tengo proyecto que mostrar, puedes visitar mi github... Waddimi Saint Louis")}>
             {resources.viewCode}
           </button>
-          <p className="Description">Description</p>
+          <p className="Description">{resources.unavailable}</p>
         </div>
       ))}
     </div>

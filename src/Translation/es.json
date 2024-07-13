@@ -25,5 +25,6 @@
   "theImportanceOfMeasurement": "La Importancia de la Medición",
   "measurementIsTheFirst": "La medición es el primer paso que lleva al control y eventualmente a la mejora. Si no puedes medir algo, no puedes entenderlo. Si no puedes entenderlo, no puedes controlarlo. Si no puedes controlarlo, no puedes mejorarlo.",
   "theArtOfDebugging": "El Arte de la Depuración",
-  "debugging": "La depuración es dos veces más difícil que escribir el código en primer lugar. Por lo tanto, si escribes el código de la manera más inteligente posible, por definición, no eres lo suficientemente inteligente como para depurarl o."
+  "debugging": "La depuración es dos veces más difícil que escribir el código en primer lugar. Por lo tanto, si escribes el código de la manera más inteligente posible, por definición, no eres lo suficientemente inteligente como para depurarl o.",
+  "unavailable": "Descripción del proyecto no disponible"
 }

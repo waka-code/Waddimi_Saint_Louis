@@ -1,6 +1,6 @@
 import { useCallback, useState } from "react";
 import { IconsGrid } from "../../designs/IconsGrid";
-import { ProjectDisplay } from "../Home/Home";
+import { DynamicProjectGrid } from "../Home/Home";
 import { ucTestData } from "../mockup/mockup";
 import { ucPortfolioStyle } from "./PortfolioStyle";
 import { ucIconsGrid } from "../../designs/hook";
@@ -26,7 +26,7 @@ export default function Portfolio() {
         <IconsGrid ochange={handleGrid} isPortfolio={true} />
       </div>
       <div style={{ padding: "20px" }}>
-        <ProjectDisplay
+        <DynamicProjectGrid
           projects={portfolio}
           isPortfolio={true}
           gridTemplateColumns={gridTemplateColumns}

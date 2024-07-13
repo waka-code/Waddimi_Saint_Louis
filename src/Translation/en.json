@@ -18,12 +18,13 @@
   "typist": "Typist",
   "softSkillsAndTools": "SOFTSKILLS AND TOOLS",
   "wakaCode": "WakaCode, where dreams become code and imagination is the compass that guides us to the unexplored. the compass that guides us towards the unexplored.",
-  "codingWithAwareness":"Coding with Awareness",
-  "AlwaysCode":"Always code as if the person who will ultimately maintain your code is a violent psychopath who knows where you live.",
+  "codingWithAwareness": "Coding with Awareness",
+  "AlwaysCode": "Always code as if the person who will ultimately maintain your code is a violent psychopath who knows where you live.",
   "theThreeUnexpectedVirtuesOfaProgrammer": "The Three Unexpected Virtues of a Programmer",
   "mostOfYouAreFamiliar": "Most of you are familiar with the virtues of a programmer. There are three, of course: laziness, impatience, and hubris.",
   "theImportanceOfMeasurement": "The Importance of Measurement",
   "measurementIsTheFirst": "Measurement is the first step that leads to control and eventually to improvement. If you can't measure something, you can't understand it. If you can't understand it, you can't control it. If you can't control it, you can't improve it.",
   "theArtOfDebugging": "The Art of Debugging",
-  "debugging": "Debugging is twice as hard as writing the code in the first place. Therefore, if you write the code as cleverly as possible, by definition, you are not smart enough to debug it."
+  "debugging": "Debugging is twice as hard as writing the code in the first place. Therefore, if you write the code as cleverly as possible, by definition, you are not smart enough to debug it.",
+  "unavailable": "Project description not available"
 }
