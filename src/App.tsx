@@ -5,7 +5,7 @@ import { Footer } from "./web/PagionFoot/Footer";
 
 const PortfolioOverview = React.lazy(() => import('./web/Home/Home'));
 const ProfessionalJourney = React.lazy(() => import('./web/About/About'));
-const Portfolio = React.lazy(() => import('./web/Portfolio/Portfolio'));
+const CreativeWorksDisplay = React.lazy(() => import('./web/Portfolio/Portfolio'));
 const Skills = React.lazy(() => import('./web/Skills/Skills'));
 
 function App() {
@@ -16,7 +16,7 @@ function App() {
         <Routes>
           <Route path="/" element={<PortfolioOverview />} />
           <Route path="/About" element={<ProfessionalJourney />} />
-          <Route path="/Portfolio" element={<Portfolio />} />
+          <Route path="/Portfolio" element={<CreativeWorksDisplay />} />
           <Route path="/Skills" element={<Skills />} />
         </Routes>
       </Suspense>

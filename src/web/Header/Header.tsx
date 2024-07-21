@@ -31,7 +31,8 @@ export const Header = () => {
           top: "3%",
           right: "3%",
           border: "1px solid rgba(0, 0, 0, 0.24)",
-          boxShadow: "0px 0px 10px 0px rgba(0, 0, 0, 0.24)",
+          // boxShadow: "0px 0px 10px 0px rgba(0, 0, 0, 0.24)",
+          boxShadow: "0 5px 8px 0 #141414",
           zIndex: 1000,
           borderRadius: "5%",
         }}

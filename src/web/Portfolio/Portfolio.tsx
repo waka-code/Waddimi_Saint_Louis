@@ -6,7 +6,7 @@ import { ucPortfolioStyle } from "./PortfolioStyle";
 import { ucIconsGrid } from "../../designs/hook";
 import { ucTranslation } from "../../Translation/resources";
 
-export default function Portfolio() {
+export default function CreativeWorksDisplay() {
   const { portfolio } = ucTestData();
   const { portfolioContainer, portfolioDiv } = ucPortfolioStyle();
   const { portfolioGrid } = ucIconsGrid({ ochange: () => {} });
