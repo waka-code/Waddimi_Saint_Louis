@@ -26,5 +26,6 @@
   "measurementIsTheFirst": "Measurement is the first step that leads to control and eventually to improvement. If you can't measure something, you can't understand it. If you can't understand it, you can't control it. If you can't control it, you can't improve it.",
   "theArtOfDebugging": "The Art of Debugging",
   "debugging": "Debugging is twice as hard as writing the code in the first place. Therefore, if you write the code as cleverly as possible, by definition, you are not smart enough to debug it.",
-  "unavailable": "Project description not available"
+  "unavailable": "Project description not available",
+  "responsiveDesignUnavailable": "Responsive design is not yet available..."
 }

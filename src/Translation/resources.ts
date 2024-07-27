@@ -31,6 +31,7 @@ export function ucTranslation() {
     theArtOfDebugging: t("theArtOfDebugging"),	
     debugging: t("debugging"),
     unavailable: t("unavailable"),	
+    responsiveDesignUnavailable: t("responsiveDesignUnavailable"),
   };
   return { resources };
 }

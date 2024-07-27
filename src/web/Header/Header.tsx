@@ -1,18 +1,43 @@
 import { ucI18n } from "../../Translation/hook";
 import { ucHeaderStyles } from "./HeaderStyles";
 import { ucHeader } from "./hook";
+import { PiWarningDiamondDuotone } from "react-icons/pi";
 
 export const Header = () => {
   const { navStyle, liStyle, ulStyle, ulScroolYStyle } = ucHeaderStyles();
-  const { hoverNav, navigation, menuNav, routeMap } = ucHeader({
-    ulScroolYStyle,
-    ulStyle,
-  });
-  
-  const { handleLanguage, language, lang, } = ucI18n();
+  const { hoverNav, navigation, menuNav, routeMap, resources, isVisible } =
+    ucHeader({
+      ulScroolYStyle,
+      ulStyle,
+    });
+  const { handleLanguage, language, lang } = ucI18n();
 
   return (
     <nav style={navStyle}>
+      {isVisible && (
+        <div
+          style={{
+            position: "fixed",
+            top: "0",
+            left: "0",
+            margin: "10px",
+            color: "white",
+            padding: "10px",
+            textAlign: "center",
+            zIndex: 1000,
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            gap: "10px",
+            backgroundColor: "rgba(0, 0, 0, 0.44)",
+            borderRadius: "5%",
+          }}
+        >
+          <PiWarningDiamondDuotone color="yellow" />
+          <text>{resources.responsiveDesignUnavailable}</text>
+          <PiWarningDiamondDuotone color="yellow" />
+        </div>
+      )}
       <ul style={hoverNav}>
         {menuNav.map((item, index) => {
           let ruta = routeMap[item] || "/";
