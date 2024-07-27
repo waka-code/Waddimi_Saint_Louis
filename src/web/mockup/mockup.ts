@@ -7,7 +7,7 @@ import noDisponible from "../../img/noDisponible.png"
 
 type Icon = {
   title: string;
-  icon: string[];
+  technologies: string[];
 };
 
 type IconObject = {
@@ -141,11 +141,11 @@ export const ucTestData = () => {
     },
   ];
 
-  const skills: IconObject = {
+  const SkillSetOverview: IconObject = {
     icons: [
       {
         title: "FRONTEND",
-        icon: [
+        technologies: [
           "HTML",
           "CSS",
           "JS",
@@ -159,11 +159,11 @@ export const ucTestData = () => {
       },
       {
         title: "BACKEND",
-        icon: ["NODE", "RUBY", "C#", "SQL", "MONGO", "FIREBASE", "EXPRESS"],
+        technologies: ["NODE", "RUBY", "C#", "SQL", "MONGO", "FIREBASE", "EXPRESS"],
       },
       {
         title: "SOFTSKILLS AND TOOLS",
-        icon: [
+        technologies: [
           "JIRA",
           "FIGMA",
           "DOCKER",
@@ -195,7 +195,7 @@ export const ucTestData = () => {
     jobDescriptions,
     workExperience,
     portfolio,
-    skills,
+    SkillSetOverview,
     CurriculumVitae
   };
 };

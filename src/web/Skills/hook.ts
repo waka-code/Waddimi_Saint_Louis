@@ -16,14 +16,14 @@ export function ucSkill() {
       [setGridTemplateColumns]
     );
   
-    const { skills } = ucTestData();
+    const { SkillSetOverview } = ucTestData();
   
    
   return {
     gridTemplateColumns,
     handleGrid,
     resources,
-    skills
+    SkillSetOverview
   }
 }
 

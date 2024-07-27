@@ -10,7 +10,7 @@ export default function Skills() {
     SkillsIcons,
     SkillsImg,
   } = ucSkillsStyles();
-  const { gridTemplateColumns, handleGrid, resources, skills } = ucSkill();
+  const { gridTemplateColumns, handleGrid, resources, SkillSetOverview } = ucSkill();
   return (
     <div style={SkillsContainer}>
       <div style={SkillsContainerDiv}>
@@ -27,7 +27,7 @@ export default function Skills() {
         data-aos-duration="1000"
         data-aos="zoom-in"
       >
-        {skills.icons.map((icon, index) => {
+        {SkillSetOverview.icons.map((icon, index) => {
           const title =
             icon.title === "SOFTSKILLS AND TOOLS"
               ? resources.softSkillsAndTools
@@ -43,7 +43,7 @@ export default function Skills() {
             >
               <span>{title}</span>
               <hr />
-              {icon.icon.map((i, index) => (
+              {icon.technologies.map((i, index) => (
                 <div key={index} style={SkillsImg}>
                   <span>{i}</span>
                 </div>
