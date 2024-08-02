@@ -22,7 +22,7 @@ export default function CreativeWorksDisplay() {
   return (
     <div style={portfolioContainer}>
       <div style={portfolioDiv}>
-        <h2>{resources.portfolio}</h2>
+        <h2 style={{color:"white", fontWeight:"bold", letterSpacing:"5px"}}>{resources.portfolio}</h2>
         <IconsGrid ochange={handleGrid} isPortfolio={true} />
       </div>
       <div style={{ padding: "20px" }}>

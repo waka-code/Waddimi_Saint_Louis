@@ -15,7 +15,7 @@ export default function Skills() {
     <div style={SkillsContainer}>
       <div style={SkillsContainerDiv}>
         <div>
-          <h2>{resources.skills}</h2>
+          <h2 style={{color:"white", fontWeight:"bold", letterSpacing:"5px"}}>{resources.skills}</h2>
         </div>
         <IconsGrid ochange={handleGrid} isPortfolio={false} />
       </div>
@@ -37,17 +37,25 @@ export default function Skills() {
               key={index}
               style={{
                 ...SkillsIcons,
-                height:
-                  gridTemplateColumns === "repeat(3, 1fr)" ? "290px" : "290px",
+                height:"300px",
               }}
             >
-              <span>{title}</span>
+              <span style={{color:"white", fontWeight:"bold", letterSpacing:"5px"}}>{title}</span>
               <hr />
-              {icon.technologies.map((i, index) => (
-                <div key={index} style={SkillsImg}>
-                  <span>{i}</span>
-                </div>
-              ))}
+              <div style={{
+                display: "grid",
+                gridTemplateColumns: "repeat(4, 1fr)",
+                gap: "10px",
+                width: "fit-content",
+                flex:"wrap",
+              }}>
+                {icon.technologies.map((i, index) => (
+                  <div key={index} style={SkillsImg}>
+                    <img src={i} width={60} height={50} />
+                  </div>
+                ))}
+              </div>
+
             </div>
           );
         })}

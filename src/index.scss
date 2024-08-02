@@ -17,7 +17,7 @@
   display: none;
   position: absolute;
   width: auto;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: #00000080;
   color: white;
   padding: 10px;
   transition: opacity 0.3s ease;
@@ -79,9 +79,20 @@ li:hover {
 .Button {
   @include cards();
   cursor: pointer;
-  bottom: 90px;
+  top: 195px;
   left: 10px;
   border: none;
+  gap: 12px;
+  width: 410px;
+}
+
+.projectCard {
+  cursor: pointer;
+  top: 270px;
+  left: 10px;
+  width: 430px;
+  border: none;
+  position: absolute;
 }
 
 .Cards img {

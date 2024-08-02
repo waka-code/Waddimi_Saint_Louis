@@ -1,5 +1,5 @@
 import { AboutStyles } from "./AboutStyles";
-import Waddy from "../../img/waddy.png";
+import Waddy from "../../assets/img/waddy.png";
 import { ucTestData } from "../mockup/mockup";
 import { Cards } from "../../designs/Cards";
 import { CardsWorkExperience } from "../../designs/CardsWorkExperience";

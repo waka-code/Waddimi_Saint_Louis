@@ -1,9 +1,36 @@
 import { ProjectProps } from "../Home/hook";
-import picture00 from "../../img/picture00.png";
-import waddyImg from "../../img/waddyImg.png";
+import picture00 from "../../assets/img/picture00.png";
+import waddyImg from "../../assets/img/waddyImg.png";
 import WaddimiSaintLouisCv_ from "../../cv/WaddimiSaintLouisCv_.pdf";
 import { ucTranslation } from "../../Translation/resources";
-import noDisponible from "../../img/noDisponible.png"
+import noDisponible from "../../assets/img/noDisponible.png"
+
+import bootstrap from "../../assets/svg/bootstrap.svg"
+import cv from "../../assets/svg/cv.svg"
+import dotnet from "../../assets/svg/dotnet.svg"
+import github from "../../assets/svg/github.svg"
+import html from "../../assets/svg/html.svg"
+import js from "../../assets/svg/js.svg"
+import figma from "../../assets/svg/figma.svg"
+import firebase from "../../assets/svg/firebase.svg"
+import jira from "../../assets/svg/jira.svg"
+import ruby from "../../assets/svg/ruby.svg"
+import next from "../../assets/svg/next.svg"
+import reactjs from "../../assets/svg/reactjs.svg"
+import css from "../../assets/svg/css.svg"
+import docker from "../../assets/svg/docker.svg"
+import express from "../../assets/svg/expressjs.svg"
+import git from "../../assets/svg/git.svg"
+import instagram from "../../assets/svg/instagram.svg"
+import linkedil from "../../assets/svg/linkedil.svg"
+import mongo from "../../assets/svg/mongo.svg"
+import node from "../../assets/svg/node.svg"
+import postman from "../../assets/svg/postman.svg"
+import sass from "../../assets/svg/sass.svg"
+import ts from "../../assets/svg/ts.svg"
+import sql from "../../assets/svg/sql.svg"
+
+
 
 type Icon = {
   title: string;
@@ -18,11 +45,11 @@ const CV =
   "https://www.canva.com/design/DAGDDUviYeU/fWYu7GRVNwJXmOLzgwPaRg/view?utm_content=DAGDDUviYeU&utm_campaign=designshare&utm_medium=link&utm_source=editor";
 
 export const ucTestData = () => {
-   const { resources } = ucTranslation();
-  
+  const { resources } = ucTranslation();
+
   //Home
 
- 
+
   const projects: ProjectProps[] = [
     {
       url: "/",
@@ -146,32 +173,29 @@ export const ucTestData = () => {
       {
         title: "FRONTEND",
         technologies: [
-          "HTML",
-          "CSS",
-          "JS",
-          "TS",
-          "REACT",
-          "NEXT",
-          "SASS",
-          "GESTALT",
-          "BOOSTRAP",
+          html,
+          css,
+          js,
+          ts,
+          reactjs,
+          next,
+          sass,
+          bootstrap,
         ],
       },
       {
         title: "BACKEND",
-        technologies: ["NODE", "RUBY", "C#", "SQL", "MONGO", "FIREBASE", "EXPRESS"],
+        technologies: [node, ruby, dotnet, sql, mongo, firebase, express],
       },
       {
         title: "SOFTSKILLS AND TOOLS",
         technologies: [
-          "JIRA",
-          "FIGMA",
-          "DOCKER",
-          "GIT",
-          "GITHUB",
-          "SCRUM",
-          "PROBLEM SOLVING",
-          "POSTMAN",
+          jira,
+          figma,
+          docker,
+          git,
+          github,
+          postman
         ],
       },
     ],
@@ -183,7 +207,7 @@ export const ucTestData = () => {
       url: CV,
     },
     {
-      title:"Donwload CV",
+      title: "Donwload CV",
       url: WaddimiSaintLouisCv_,
     }
   ];

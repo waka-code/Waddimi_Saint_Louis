@@ -79,7 +79,7 @@ export const DynamicProjectGrid: React.FC<ProjectDisplayProps> = ({
   const navigate = useNavigate();
   const { resources } = ucTranslation();
   const { divStyles, projectGrid } = ucProjectDisplayStyles();
-  const { portfolioStyle, portfolioGrid, portfolioImg, imgStyle} = ucPortfolioStyle();
+  const { portfolioStyle, portfolioGrid, portfolioImg, imgStyle } = ucPortfolioStyle();
 
   const { hoverCards } = ucScrollHover({
     ulScroolYStyle: undefined,
@@ -89,8 +89,14 @@ export const DynamicProjectGrid: React.FC<ProjectDisplayProps> = ({
   });
 
   const width = useMemo(() => {
-   return gridTemplateColumns === "repeat(3, 1fr)" ? "450px" : "550px";
+    return gridTemplateColumns === "repeat(3, 1fr)" ? "450px" : "550px";
   }, [gridTemplateColumns]);
+
+  const size = {
+    width: "100px",
+    height: "30px",
+    margin: "2px"
+  }
 
   return (
     <div
@@ -106,17 +112,32 @@ export const DynamicProjectGrid: React.FC<ProjectDisplayProps> = ({
           onClick={() => navigate(project.url)}
           style={isPortfolio ? { ...portfolioGrid, width } : projectGrid}
           className="Cards"
-          
+
         >
           <img
             src={project.img}
             alt="proyecto"
             style={isPortfolio ? portfolioImg : imgStyle}
           />
-          <button className="Button" onClickCapture={() => alert("Aun no tengo proyecto que mostrar, puedes visitar mi github... Waddimi Saint Louis")}>
-            {resources.viewCode}
-          </button>
-          <p className="Description">{resources.unavailable}</p>
+
+
+          <div className="Button" >
+            <div>
+              <div>
+                <h4>Tecnologias usadas</h4>
+              </div>
+
+              <span>Title</span>
+              <p>{resources.unavailable}</p>
+              <button style={size} onClickCapture={() => alert("Aun no tengo proyecto que mostrar, puedes visitar mi github... Waddimi Saint Louis")}>
+                github
+              </button>
+              <button style={size} onClickCapture={() => alert("Aun no tengo proyecto que mostrar, puedes visitar mi github... Waddimi Saint Louis")}>
+                {resources.viewCode}
+              </button>
+            </div>
+          </div>
+
         </div>
       ))}
     </div>
