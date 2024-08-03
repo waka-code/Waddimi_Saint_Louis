@@ -51,7 +51,6 @@ export const ucProjectDisplayStyles = () => {
 
   const projectGrid: React.CSSProperties = {
     borderRadius: "10px",
-    padding: "5px 0",
     transition: "all 0.6s ease",
     boxShadow: "0 5px 8px 0 #141414",
     border: "2px solid #141414",

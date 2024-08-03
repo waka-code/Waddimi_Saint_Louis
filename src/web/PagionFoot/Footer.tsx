@@ -2,13 +2,18 @@ import { ucFooterStyles } from "./FooterStyle";
 import { ucTestData } from "../mockup/mockup";
 
 export const Footer = () => {
-  const { divFooter, ulFooterStyle } = ucFooterStyles();
-  const { social } = ucTestData();
+  const { divFooter } = ucFooterStyles();
+  // const { social } = ucTestData();
 
   return (
     <div style={divFooter}>
-      <div>2024 Waddimi Saint Louis - wakaCode</div>
-      <div>
+      <span style={{
+        color: "white",
+        fontWeight: "bold",
+        letterSpacing: "3px",
+        fontSize: "18px",
+      }}>2024 Waddimi Saint Louis - wakaCode</span>
+      {/* <div>
         <h3>Elsewhere</h3>
         {social.map((i) => {
           return (
@@ -22,7 +27,7 @@ export const Footer = () => {
             </a>
           );
         })}
-      </div>
+      </div> */}
     </div>
   );
 };

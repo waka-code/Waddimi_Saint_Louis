@@ -19,7 +19,6 @@
   width: auto;
   background-color: #00000080;
   color: white;
-  padding: 10px;
   transition: opacity 0.3s ease;
   border-radius: 10px;
   overflow: hidden;
@@ -76,14 +75,12 @@ li:hover {
   max-width: 31.5ch;
   overflow: hidden;
 }
-.Button {
+.projectAnimationHover {
   @include cards();
   cursor: pointer;
-  top: 195px;
-  left: 10px;
   border: none;
-  gap: 12px;
-  width: 410px;
+  width: 100%;
+  height: 100%;
 }
 
 .projectCard {
@@ -103,7 +100,7 @@ li:hover {
   opacity: 0.9;
 }
 
-.Cards:hover .Button,
+.Cards:hover .projectAnimationHover,
 .Cards:hover .Description {
   display: block;
 }
@@ -157,4 +154,20 @@ li:hover {
   background-color: rgba(0, 0, 0, 0.74);
   color: white;
   transform: scale(1.05);
+}
+
+
+.social {
+  // border: 1px solid #141414;
+  padding: 8px 10px;
+  transition: ease-in-out 0.4s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.social:hover{
+  background-color: #BA9797;
+  transform: scale(1.05);
+  box-shadow: 0 1px 4px 0 #141414;
+  border-radius: 5px;
 }

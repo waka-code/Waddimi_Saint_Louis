@@ -37,7 +37,7 @@ export default function Skills() {
               key={index}
               style={{
                 ...SkillsIcons,
-                height:"300px",
+                height:"500px",
               }}
             >
               <span style={{color:"white", fontWeight:"bold", letterSpacing:"5px"}}>{title}</span>

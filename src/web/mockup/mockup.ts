@@ -6,7 +6,6 @@ import { ucTranslation } from "../../Translation/resources";
 import noDisponible from "../../assets/img/noDisponible.png"
 
 import bootstrap from "../../assets/svg/bootstrap.svg"
-import cv from "../../assets/svg/cv.svg"
 import dotnet from "../../assets/svg/dotnet.svg"
 import github from "../../assets/svg/github.svg"
 import html from "../../assets/svg/html.svg"
@@ -21,16 +20,14 @@ import css from "../../assets/svg/css.svg"
 import docker from "../../assets/svg/docker.svg"
 import express from "../../assets/svg/expressjs.svg"
 import git from "../../assets/svg/git.svg"
-import instagram from "../../assets/svg/instagram.svg"
-import linkedil from "../../assets/svg/linkedil.svg"
 import mongo from "../../assets/svg/mongo.svg"
 import node from "../../assets/svg/node.svg"
 import postman from "../../assets/svg/postman.svg"
 import sass from "../../assets/svg/sass.svg"
 import ts from "../../assets/svg/ts.svg"
 import sql from "../../assets/svg/sql.svg"
-
-
+import tailwind from "../../assets/svg/tailwind.svg"
+import postgresql from "../../assets/svg/postgresql.svg"
 
 type Icon = {
   title: string;
@@ -181,11 +178,12 @@ export const ucTestData = () => {
           next,
           sass,
           bootstrap,
+          tailwind
         ],
       },
       {
         title: "BACKEND",
-        technologies: [node, ruby, dotnet, sql, mongo, firebase, express],
+        technologies: [node, ruby, dotnet, sql, mongo, firebase, express, postgresql],
       },
       {
         title: "SOFTSKILLS AND TOOLS",

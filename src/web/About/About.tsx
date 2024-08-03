@@ -18,10 +18,14 @@ const ProfessionalJourney = () => {
   const { jobDescriptions, workExperience, imageFiles } = ucTestData();
 
   return (
-    <div>
-      <div data-aos="fade-down">
+    <div
+      style={{
+        marginTop: "100px",
+      }}
+    >
+      {/* <div data-aos="fade-down">
         <span style={styles.descriptionH2}>{resources.IamLouis}</span>
-      </div>
+      </div> */}
       <PersonalProfileSection {...styles.aboutMe} />
       <WorkExperience
         workExperience={workExperience}
@@ -56,6 +60,11 @@ const PersonalProfileSection = ({
       </div>
       <div style={description} data-aos="fade-left">
         <h2 style={{ display: "flex", flexWrap: "wrap", width: "500px" }}>
+        <span style={{
+          fontSize: "15px",
+          marginBottom: "10px",
+          color: "#BA9797"
+        }}>Hi, Welcome</span>
           {resources.iAmAPassionate}
         </h2>
         <span

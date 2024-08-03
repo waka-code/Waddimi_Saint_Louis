@@ -21,7 +21,7 @@ const PortfolioOverview = () => {
       <div style={divStyles}>
         <h1 style={h1Styles}>
           <span
-            style={isTabletDevice ? { color: "#734c4c" } : { color: "white" }}
+            style={isTabletDevice ? { color: "#BA9797" } : { color: "white" }}
           >
             {resources.hiIamLouis}
           </span>
@@ -54,7 +54,10 @@ const PortfolioOverview = () => {
 
         <h2 style={h2Styles}>{resources.welcomeAWakacode}</h2>
         <p style={pStyles}>{resources.wakaCode}</p>
-        <DynamicProjectGrid projects={projects} gridTemplateColumns={undefined} />
+        <DynamicProjectGrid
+          projects={projects}
+          gridTemplateColumns={undefined}
+        />
       </div>
       {/* Sección en progreso */}
       <div style={divStyles}>
@@ -79,7 +82,8 @@ export const DynamicProjectGrid: React.FC<ProjectDisplayProps> = ({
   const navigate = useNavigate();
   const { resources } = ucTranslation();
   const { divStyles, projectGrid } = ucProjectDisplayStyles();
-  const { portfolioStyle, portfolioGrid, portfolioImg, imgStyle } = ucPortfolioStyle();
+  const { portfolioStyle, portfolioGrid, portfolioImg, imgStyle } =
+    ucPortfolioStyle();
 
   const { hoverCards } = ucScrollHover({
     ulScroolYStyle: undefined,
@@ -93,10 +97,10 @@ export const DynamicProjectGrid: React.FC<ProjectDisplayProps> = ({
   }, [gridTemplateColumns]);
 
   const size = {
-    width: "100px",
-    height: "30px",
-    margin: "2px"
-  }
+    width: "200px",
+    height: "40px",
+    cursor: "pointer",
+  };
 
   return (
     <div
@@ -112,7 +116,6 @@ export const DynamicProjectGrid: React.FC<ProjectDisplayProps> = ({
           onClick={() => navigate(project.url)}
           style={isPortfolio ? { ...portfolioGrid, width } : projectGrid}
           className="Cards"
-
         >
           <img
             src={project.img}
@@ -120,24 +123,45 @@ export const DynamicProjectGrid: React.FC<ProjectDisplayProps> = ({
             style={isPortfolio ? portfolioImg : imgStyle}
           />
 
-
-          <div className="Button" >
-            <div>
+          <div className="projectAnimationHover">
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "center",
+                alignItems: "center",
+                paddingTop: "40px",
+                gap: "10px",
+              }}
+            >
               <div>
-                <h4>Tecnologias usadas</h4>
+                <h4 style={{color:"white", fontSize:"20px", fontWeight:"bold", letterSpacing:"4px"}}>Tecnologias usadas</h4>
               </div>
 
               <span>Title</span>
               <p>{resources.unavailable}</p>
-              <button style={size} onClickCapture={() => alert("Aun no tengo proyecto que mostrar, puedes visitar mi github... Waddimi Saint Louis")}>
+              <button
+                style={size}
+                onClickCapture={() =>
+                  alert(
+                    "Aun no tengo proyecto que mostrar, puedes visitar mi github... Waddimi Saint Louis"
+                  )
+                }
+              >
                 github
               </button>
-              <button style={size} onClickCapture={() => alert("Aun no tengo proyecto que mostrar, puedes visitar mi github... Waddimi Saint Louis")}>
+              <button
+                style={size}
+                onClickCapture={() =>
+                  alert(
+                    "Aun no tengo proyecto que mostrar, puedes visitar mi github... Waddimi Saint Louis"
+                  )
+                }
+              >
                 {resources.viewCode}
               </button>
             </div>
           </div>
-
         </div>
       ))}
     </div>

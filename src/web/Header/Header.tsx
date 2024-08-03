@@ -2,6 +2,10 @@ import { ucI18n } from "../../Translation/hook";
 import { ucHeaderStyles } from "./HeaderStyles";
 import { ucHeader } from "./hook";
 import { PiWarningDiamondDuotone } from "react-icons/pi";
+import cv from "../../assets/svg/cv.svg";
+import instagram from "../../assets/svg/instagram.svg";
+import linkedin from "../../assets/svg/linkedin.svg";
+import github from "../../assets/svg/github.svg"
 
 export const Header = () => {
   const { navStyle, liStyle, ulStyle, ulScroolYStyle } = ucHeaderStyles();
@@ -19,7 +23,7 @@ export const Header = () => {
           style={{
             position: "fixed",
             top: "0",
-            left: "0",
+            left: "70px",
             margin: "10px",
             color: "white",
             padding: "10px",
@@ -38,6 +42,50 @@ export const Header = () => {
           <PiWarningDiamondDuotone color="yellow" />
         </div>
       )}
+      <div
+        style={{
+          position: "fixed",
+          top: "-10px",
+          left: "0",
+          margin: "10px",
+          paddingLeft: "10px",
+          paddingRight: "10px",
+          paddingBottom: "10px",
+          zIndex: 1000,
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          flexDirection: "column",
+          gap: "15px",
+          backgroundColor: "#333333",
+          borderRadius: "5%",
+          width: "40px",
+        }}
+      >
+        <div
+          style={{
+            height: "150px",
+            backgroundColor: "#BA9797",
+            width: "10%",
+          }}
+        />
+        {[cv, instagram, linkedin, github].map((i, idx) => {
+          const tooltips = ["Curriculum", "Github", "Instagram", "LinkedIn"];
+          return (
+            <div className="social">
+              <img
+                key={idx}
+                src={i}
+                width={25}
+                title={tooltips[idx]}
+                style={{
+                  cursor: "pointer",
+                }}
+              />
+            </div>
+          );
+        })}
+      </div>
       <ul style={hoverNav}>
         {menuNav.map((item, index) => {
           let ruta = routeMap[item] || "/";
@@ -53,13 +101,13 @@ export const Header = () => {
       <div
         style={{
           position: "fixed",
-          top: "3%",
-          right: "3%",
-          border: "1px solid rgba(0, 0, 0, 0.24)",
-          // boxShadow: "0px 0px 10px 0px rgba(0, 0, 0, 0.24)",
-          boxShadow: "0 5px 8px 0 #141414",
-          zIndex: 1000,
-          borderRadius: "5%",
+          top: "1.5%",
+          right: "0%",
+          height: "100px",
+          gap: "5px",
+          display: "flex",
+          flexDirection: "column",
+          width: "100px",
         }}
       >
         {lang.map((i, idx) => {
@@ -70,23 +118,27 @@ export const Header = () => {
                 handleLanguage(i);
               }}
               style={{
-                backgroundColor:
-                  language === i ? "rgba(0, 0, 0, 0.44)" : "transparent",
-                color: language === i ? "white" : "black",
-                width: "40px",
-                border: "none",
+                backgroundColor: language === i ? "#141414" : "#E8DEDE",
+                color: language === i ? "#BA9797" : "#141414",
+                border: language === i ? "1px solid #BA9797" : "none",
+                width: "100px",
+                maxHeight: "120px",
                 fontSize: "25px",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
-                height: "40px",
+                height: "100px",
                 cursor: "pointer",
                 transition: "background-color 0.5s ease, color 0.5s ease",
+                borderBottomLeftRadius: "100px",
+                borderTopLeftRadius: "100px",
               }}
             >
               <text
                 style={{
-                  fontSize: "15px",
+                  fontSize: "16px",
+                  fontWeight: "bold",
+                  letterSpacing: "1px",
                 }}
               >
                 {i}
