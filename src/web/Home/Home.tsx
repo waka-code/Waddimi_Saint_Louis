@@ -143,6 +143,7 @@ export const DynamicProjectGrid: React.FC<ProjectDisplayProps> = ({
               <p>{resources.unavailable}</p>
               <button
                 style={size}
+                disabled={true}
                 onClickCapture={() =>
                   alert(
                     "Aun no tengo proyecto que mostrar, puedes visitar mi github... Waddimi Saint Louis"
@@ -153,6 +154,7 @@ export const DynamicProjectGrid: React.FC<ProjectDisplayProps> = ({
               </button>
               <button
                 style={size}
+                disabled={true}
                 onClickCapture={() =>
                   alert(
                     "Aun no tengo proyecto que mostrar, puedes visitar mi github... Waddimi Saint Louis"
