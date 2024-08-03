@@ -5,6 +5,7 @@ import { Cards } from "../../designs/Cards";
 import { CardsWorkExperience } from "../../designs/CardsWorkExperience";
 import { ucTranslation } from "../../Translation/resources";
 import { AboutStyle, JobDetails, ImageStyleProps } from "../Types/Types";
+import WhatsApp from "../../assets/svg/WhatsApp.svg";
 
 type WorkExperienceProps = {
   Novosit: JobDetails;
@@ -14,7 +15,6 @@ type WorkExperienceProps = {
 
 const ProfessionalJourney = () => {
   const { styles } = AboutStyles();
-  const { resources } = ucTranslation();
   const { jobDescriptions, workExperience, imageFiles } = ucTestData();
 
   return (
@@ -59,23 +59,59 @@ const PersonalProfileSection = ({
         </div>
       </div>
       <div style={description} data-aos="fade-left">
-        <h2 style={{ display: "flex", flexWrap: "wrap", width: "500px" }}>
-        <span style={{
-          fontSize: "15px",
-          marginBottom: "10px",
-          color: "#BA9797"
-        }}>Hi, Welcome</span>
-          {resources.iAmAPassionate}
-        </h2>
-        <span
+        <div>
+          <h2 style={{ display: "flex", flexWrap: "wrap", width: "500px" }}>
+            <span
+              style={{
+                fontSize: "15px",
+                marginBottom: "10px",
+                color: "#BA9797",
+              }}
+            >
+              Hi, Welcome
+            </span>
+            {resources.iAmAPassionate}
+          </h2>
+          <span
+            style={{
+              display: "flex",
+              flexWrap: "wrap",
+              width: "500px",
+            }}
+          >
+            {resources.twoYears}
+          </span>
+        </div>
+        <div
           style={{
-            display: "flex",
-            flexWrap: "wrap",
-            width: "500px",
+            width: "75%",
           }}
         >
-          {resources.twoYears}
-        </span>
+          <button
+            style={{
+              height: "40px",
+              width: "50%",
+              cursor: "pointer",
+              fontWeight: "bold",
+              letterSpacing: "4px",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              gap: "10px",
+            }}
+          >
+             <img
+              src={WhatsApp}
+              alt="whatsapp"
+              style={{
+                width: "20px",
+                height: "20px",
+                marginLeft: "10px",
+              }}
+            />
+            <span>CONTACT US</span>
+          </button>
+        </div>
       </div>
     </div>
   );
@@ -91,13 +127,26 @@ const WorkExperience = ({
   workExperience: WorkExperienceProps;
 }) => {
   return (
-    <div style={container}>
+    <div style={{...container, display:"flex", flexDirection:"column", background:"#333333"}}>
+     <div style={{
+      paddingLeft:"110px",
+     }}> <h2
+     style={{
+       fontSize:"2.5rem",
+     }}>My <span style={{
+        color:"#BA9797",
+        fontSize:"2.5rem",
+        fontWeight:"bold",
+      }}>Experience</span></h2>
+      </div>
+       <div style={container}>
       <CardsWorkExperience
         jobDescriptions={{}}
         aboutWorkExperienceStyle={box}
         isAboutSection={true}
         workExperienceDetails={workExperience}
       />
+    </div>
     </div>
   );
 };

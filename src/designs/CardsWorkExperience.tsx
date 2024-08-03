@@ -1,5 +1,8 @@
-import { JobDescription, JobDetails, WorkExperienceProps } from "../web/Types/Types";
-
+import {
+  JobDescription,
+  JobDetails,
+  WorkExperienceProps,
+} from "../web/Types/Types";
 
 const WorkExperienceItem: React.FC<{
   aboutWorkExperienceStyle: React.CSSProperties | undefined;
@@ -12,15 +15,30 @@ const WorkExperienceItem: React.FC<{
     className={isAboutSection ? "AboutWorkExperienceBox" : undefined}
     style={aboutWorkExperienceStyle}
   >
-    <h3>
-      {"jobTitle" in description ? description.jobTitle : description.position}
-    </h3>
-    <span>{"jobTitle" in description ? key : description?.title}</span>
-    <p>
-      {"jobDuration" in description
-        ? description?.jobDuration
-        : description?.description}
-    </p>
+    {"jobDuration" in description ? (
+      <div style={{
+        display: "flex",
+        flexDirection: "column",
+        width: "100%",
+        height: "100%",
+        padding: "1rem",
+      }}>
+        <span>{description?.jobDuration}</span>
+        <span style={{
+          fontSize: "1.5rem",
+          fontWeight: "bold",
+          color:"#BA9797"
+        }}>{description.jobTitle}</span>
+        <span>{description.stack}</span>
+        <p>{description.description}</p>
+      </div>
+    ) : (
+      <div>
+        <h3>{description.position}</h3>
+        <span>{description?.title}</span>
+        <p>{description?.description}</p>
+      </div>
+    )}
   </div>
 );
 

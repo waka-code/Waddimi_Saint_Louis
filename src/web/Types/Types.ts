@@ -16,6 +16,8 @@ export type JobDescription = {
 export type JobDetails = {
   jobTitle: string;
   jobDuration: string;
+  stack: string;
+  description: string;
 };
 
 export type WorkExperienceProps = {

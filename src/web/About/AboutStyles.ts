@@ -20,7 +20,7 @@ export function AboutStyles() {
         alignItems: "center",
         padding: "20px",
         width: "40%",
-        gap: "10px",	
+        gap: "30px",	
       },
       imgContainer: {
         height: "600px",

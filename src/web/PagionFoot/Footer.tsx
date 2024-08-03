@@ -1,5 +1,4 @@
 import { ucFooterStyles } from "./FooterStyle";
-import { ucTestData } from "../mockup/mockup";
 
 export const Footer = () => {
   const { divFooter } = ucFooterStyles();

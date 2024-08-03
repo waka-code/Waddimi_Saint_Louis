@@ -16,6 +16,7 @@ const PortfolioOverview = () => {
   const { resources } = ucTranslation();
   const { isTabletDevice } = ucMediaQuery();
 
+
   return (
     <div style={divContainer}>
       <div style={divStyles}>

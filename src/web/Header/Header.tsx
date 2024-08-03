@@ -2,10 +2,8 @@ import { ucI18n } from "../../Translation/hook";
 import { ucHeaderStyles } from "./HeaderStyles";
 import { ucHeader } from "./hook";
 import { PiWarningDiamondDuotone } from "react-icons/pi";
-import cv from "../../assets/svg/cv.svg";
-import instagram from "../../assets/svg/instagram.svg";
-import linkedin from "../../assets/svg/linkedin.svg";
-import github from "../../assets/svg/github.svg"
+
+import { ucTestData } from "../mockup/mockup";
 
 export const Header = () => {
   const { navStyle, liStyle, ulStyle, ulScroolYStyle } = ucHeaderStyles();
@@ -15,6 +13,7 @@ export const Header = () => {
       ulStyle,
     });
   const { handleLanguage, language, lang } = ucI18n();
+  const { social } = ucTestData();
 
   return (
     <nav style={navStyle}>
@@ -56,7 +55,7 @@ export const Header = () => {
           alignItems: "center",
           justifyContent: "center",
           flexDirection: "column",
-          gap: "15px",
+          gap: "10px",
           backgroundColor: "#333333",
           borderRadius: "5%",
           width: "40px",
@@ -69,19 +68,21 @@ export const Header = () => {
             width: "10%",
           }}
         />
-        {[cv, instagram, linkedin, github].map((i, idx) => {
-          const tooltips = ["Curriculum", "Github", "Instagram", "LinkedIn"];
+
+        {social.map((i, idx) => {
           return (
             <div className="social">
-              <img
-                key={idx}
-                src={i}
-                width={25}
-                title={tooltips[idx]}
-                style={{
-                  cursor: "pointer",
-                }}
-              />
+              <a href={i.url} target="_blank" rel="noreferrer">
+                <img
+                  key={idx}
+                  src={i.icon}
+                  width={25}
+                  title={i.name}
+                  style={{
+                    cursor: "pointer",
+                  }}
+                />
+              </a>
             </div>
           );
         })}
@@ -107,7 +108,7 @@ export const Header = () => {
           gap: "5px",
           display: "flex",
           flexDirection: "column",
-          width: "100px",
+          width: "80px",
         }}
       >
         {lang.map((i, idx) => {
@@ -121,7 +122,7 @@ export const Header = () => {
                 backgroundColor: language === i ? "#141414" : "#E8DEDE",
                 color: language === i ? "#BA9797" : "#141414",
                 border: language === i ? "1px solid #BA9797" : "none",
-                width: "100px",
+                width: "80px",
                 maxHeight: "120px",
                 fontSize: "25px",
                 display: "flex",

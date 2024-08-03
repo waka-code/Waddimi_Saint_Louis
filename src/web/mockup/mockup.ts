@@ -3,31 +3,34 @@ import picture00 from "../../assets/img/picture00.png";
 import waddyImg from "../../assets/img/waddyImg.png";
 import WaddimiSaintLouisCv_ from "../../cv/WaddimiSaintLouisCv_.pdf";
 import { ucTranslation } from "../../Translation/resources";
-import noDisponible from "../../assets/img/noDisponible.png"
+import noDisponible from "../../assets/img/noDisponible.png";
 
-import bootstrap from "../../assets/svg/bootstrap.svg"
-import dotnet from "../../assets/svg/dotnet.svg"
-import github from "../../assets/svg/github.svg"
-import html from "../../assets/svg/html.svg"
-import js from "../../assets/svg/js.svg"
-import figma from "../../assets/svg/figma.svg"
-import firebase from "../../assets/svg/firebase.svg"
-import jira from "../../assets/svg/jira.svg"
-import ruby from "../../assets/svg/ruby.svg"
-import next from "../../assets/svg/next.svg"
-import reactjs from "../../assets/svg/reactjs.svg"
-import css from "../../assets/svg/css.svg"
-import docker from "../../assets/svg/docker.svg"
-import express from "../../assets/svg/expressjs.svg"
-import git from "../../assets/svg/git.svg"
-import mongo from "../../assets/svg/mongo.svg"
-import node from "../../assets/svg/node.svg"
-import postman from "../../assets/svg/postman.svg"
-import sass from "../../assets/svg/sass.svg"
-import ts from "../../assets/svg/ts.svg"
-import sql from "../../assets/svg/sql.svg"
-import tailwind from "../../assets/svg/tailwind.svg"
-import postgresql from "../../assets/svg/postgresql.svg"
+import bootstrap from "../../assets/svg/bootstrap.svg";
+import dotnet from "../../assets/svg/dotnet.svg";
+import github from "../../assets/svg/github.svg";
+import html from "../../assets/svg/html.svg";
+import js from "../../assets/svg/js.svg";
+import figma from "../../assets/svg/figma.svg";
+import firebase from "../../assets/svg/firebase.svg";
+import jira from "../../assets/svg/jira.svg";
+import ruby from "../../assets/svg/ruby.svg";
+import next from "../../assets/svg/next.svg";
+import reactjs from "../../assets/svg/reactjs.svg";
+import css from "../../assets/svg/css.svg";
+import docker from "../../assets/svg/docker.svg";
+import express from "../../assets/svg/expressjs.svg";
+import git from "../../assets/svg/git.svg";
+import mongo from "../../assets/svg/mongo.svg";
+import node from "../../assets/svg/node.svg";
+import postman from "../../assets/svg/postman.svg";
+import sass from "../../assets/svg/sass.svg";
+import ts from "../../assets/svg/ts.svg";
+import sql from "../../assets/svg/sql.svg";
+import tailwind from "../../assets/svg/tailwind.svg";
+import postgresql from "../../assets/svg/postgresql.svg";
+import cv from "../../assets/svg/cv.svg";
+import instagram from "../../assets/svg/instagram.svg";
+import linkedin from "../../assets/svg/linkedin.svg";
 
 type Icon = {
   title: string;
@@ -45,7 +48,6 @@ export const ucTestData = () => {
   const { resources } = ucTranslation();
 
   //Home
-
 
   const projects: ProjectProps[] = [
     {
@@ -79,19 +81,23 @@ export const ucTestData = () => {
   //footer
   const social = [
     {
+      icon: github,
       name: "GitHub",
       url: "https://github.com/waka-code",
     },
     {
+      icon: linkedin,
       name: "LinkedIn",
       url: "https://www.linkedin.com/in/waddimi-saint-louis-b49424230/",
     },
     {
-      name: "instagram",
+      icon: instagram,
+      name: "Instagram",
       url: "https://www.instagram.com/saint_louis29/",
     },
     {
-      name: "CV",
+      icon: cv,
+      name: "Curriculum Vitae",
       url: CV,
     },
   ];
@@ -125,13 +131,45 @@ export const ucTestData = () => {
   };
 
   const workExperience: {
-    Novosit: { jobTitle: string; jobDuration: string };
-    Upwork: { jobTitle: string; jobDuration: string };
-    Digitador: { jobTitle: string; jobDuration: string };
+    Novosit: {
+      jobTitle: string;
+      jobDuration: string;
+      stack: string;
+      description: string;
+    };
+    Upwork: {
+      jobTitle: string;
+      jobDuration: string;
+      stack: string;
+      description: string;
+    };
+    Digitador: {
+      jobTitle: string;
+      jobDuration: string;
+      stack: string;
+      description: string;
+    };
   } = {
-    Novosit: { jobTitle: "Fullstack developer", jobDuration: "2023 - Actual" },
-    Upwork: { jobTitle: "Freelancer", jobDuration: "2020 - 2023" },
-    Digitador: { jobTitle: resources.typist, jobDuration: "2019 - 2020" },
+    Novosit: {
+      jobTitle: "Fullstack developer",
+      jobDuration: "2023 - Actual",
+      stack: "React, Mongo C#, Typescript, Node, Docker",
+      description:
+        "Desarrollar y mantener aplicaciones web completas, desde la interfaz de usuario hasta la lógica del servidor y la gestión de bases de datos.",
+    },
+    Upwork: {
+      jobTitle: "Freelancer",
+      jobDuration: "2020 - 2023",
+      stack: "Html, Css, Javascript",
+      description:
+        "Maquetación web, transformar diseños en páginas web funcionales y atractivas, asegurando una buena experiencia de usuario en diferentes dispositivos y navegadores.",
+    },
+    Digitador: {
+      jobTitle: resources.typist,
+      jobDuration: "2019 - 2020",
+      stack: "Excel, Word, Powerpoint",
+      description: "Me encargaba de la entrada y gestión de datos, asegurando que la información sea precisa, organizada y accesible.",
+    },
   };
 
   const imageFiles = {
@@ -178,23 +216,25 @@ export const ucTestData = () => {
           next,
           sass,
           bootstrap,
-          tailwind
+          tailwind,
         ],
       },
       {
         title: "BACKEND",
-        technologies: [node, ruby, dotnet, sql, mongo, firebase, express, postgresql],
+        technologies: [
+          node,
+          ruby,
+          dotnet,
+          sql,
+          mongo,
+          firebase,
+          express,
+          postgresql,
+        ],
       },
       {
         title: "SOFTSKILLS AND TOOLS",
-        technologies: [
-          jira,
-          figma,
-          docker,
-          git,
-          github,
-          postman
-        ],
+        technologies: [jira, figma, docker, git, github, postman],
       },
     ],
   };
@@ -207,7 +247,7 @@ export const ucTestData = () => {
     {
       title: "Donwload CV",
       url: WaddimiSaintLouisCv_,
-    }
+    },
   ];
   return {
     imageFiles,
@@ -218,6 +258,6 @@ export const ucTestData = () => {
     workExperience,
     portfolio,
     SkillSetOverview,
-    CurriculumVitae
+    CurriculumVitae,
   };
 };
