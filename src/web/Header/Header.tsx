@@ -105,11 +105,11 @@ export const Header = () => {
           position: "fixed",
           top: "3.5%",
           right: "0%",
-          height: "100px",
           gap: "15px",
           display: "flex",
           flexDirection: "column",
-          width: "80px",
+          width: "100px",
+          height: "110px",
         }}
       >
         {lang.map((i, idx) => {
@@ -120,25 +120,27 @@ export const Header = () => {
                 handleLanguage(i);
               }}
               style={{
-                backgroundColor: language === i ? "#141414" : "#949494",
-                border: "none",
-                width: "80px",
-                maxHeight: "120px",
+                backgroundColor: language === i ? "#333333" : "#141414",
+                border: language === i ? "2px solid #787878" : "none",
+                width: "100px",
+                maxHeight: "150px",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
-                height: "100px",
+                height: "130px",
                 cursor: "pointer",
                 transition: "background-color 0.5s ease, color 0.5s ease",
                 borderBottomLeftRadius: "100px",
                 borderTopLeftRadius: "100px",
+                position:"relative",
+                borderRight:"none"
               }}
             >
-                <img
-                  key={idx}
-                  src={i === "es" ? spain : us}
-                  width={20}
-                />
+              <img
+                key={idx}
+                src={i === "es" ? spain : us}
+                width={20}
+              />
             </button>
           );
         })}
