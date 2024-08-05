@@ -136,7 +136,7 @@ export const DynamicProjectGrid: React.FC<ProjectDisplayProps> = ({
               }}
             >
               <div>
-                <h4 style={{color:"white", fontSize:"20px", fontWeight:"bold", letterSpacing:"4px"}}>Tecnologias usadas</h4>
+                <h4 style={{ color: "white", fontSize: "20px", fontWeight: "bold", letterSpacing: "4px" }}>{resources.technologiesUsed}</h4>
               </div>
 
               <span>Title</span>

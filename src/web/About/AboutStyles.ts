@@ -1,18 +1,11 @@
 export function AboutStyles() {
   const styles = {
-    descriptionH2: {
-      display: "flex",
-      justifyContent: "center",
-      alignItems: "center",
-      fontSize: "150px",
-      padding: "60px 0 60px 0",
-    },
     aboutMe: {
       container: {
         display: "flex",
         gap: "20px",
         justifyContent: "center",
-        margin: "0 0 100px 0",
+        margin: "0 0 200px 0",
       },
       description: {
         display: "flex",
@@ -56,6 +49,7 @@ export function AboutStyles() {
         display: "flex",
         padding: "60px",
         justifyContent: "Space-around",
+        margin: "0 0 50px 0",
       },
     },
     pictureMe: {
@@ -68,12 +62,11 @@ export function AboutStyles() {
       divContainer: {
         display: "grid",
         gridTemplateColumns: "450px 450px",
-        gap: "40px",
+        gap: "50px",
         borderRadius: "10px",
-        padding: "40px",
+        padding: "80px",
         backgroundColor: "#141414",
         boxShadow: "0 5px 8px 0 #141414",
-        border: "2px solid #141414",
       },
       picture: {
         display: "flex",
@@ -91,7 +84,7 @@ export function AboutStyles() {
       },
       img: {
         width: "auto",
-        height: "800px",
+        height: "700px",
         objectFit: "cover" as "cover",
       },
     },

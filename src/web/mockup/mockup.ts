@@ -154,21 +154,19 @@ export const ucTestData = () => {
       jobTitle: "Fullstack developer",
       jobDuration: "2023 - Actual",
       stack: "React, Mongo C#, Typescript, Node, Docker",
-      description:
-        "Desarrollar y mantener aplicaciones web completas, desde la interfaz de usuario hasta la lógica del servidor y la gestión de bases de datos.",
+      description: resources.novosit
     },
     Upwork: {
       jobTitle: "Freelancer",
       jobDuration: "2020 - 2023",
       stack: "Html, Css, Javascript",
-      description:
-        "Maquetación web, transformar diseños en páginas web funcionales y atractivas, asegurando una buena experiencia de usuario en diferentes dispositivos y navegadores.",
+      description: resources.upwork
     },
     Digitador: {
       jobTitle: resources.typist,
       jobDuration: "2019 - 2020",
       stack: "Excel, Word, Powerpoint",
-      description: "Me encargaba de la entrada y gestión de datos, asegurando que la información sea precisa, organizada y accesible.",
+      description: resources.workTypist,
     },
   };
 

@@ -27,5 +27,15 @@
   "theArtOfDebugging": "The Art of Debugging",
   "debugging": "Debugging is twice as hard as writing the code in the first place. Therefore, if you write the code as cleverly as possible, by definition, you are not smart enough to debug it.",
   "unavailable": "Project description not available",
-  "responsiveDesignUnavailable": "Responsive design is not yet available..."
+  "responsiveDesignUnavailable": "Responsive design is not yet available...",
+
+  "hi": "Hi, Welcome",
+  "contactUs": "CONTACT US",
+  "my": "My",
+  "experience":"Experience",
+  "novosit": "Develop and maintain complete web applications, from user interface to server logic and database management.",
+  "upwork": "Web layout, transforming designs into functional and attractive web pages, ensuring a good user experience on different devices and browsers.",
+  "workTypist": "I was in charge of data entry and management, ensuring that information is accurate, organized and accessible.",
+  "phrasesOfTheDay": "Phrases of the day...",
+  "technologiesUsed":"Technologies used"
 }

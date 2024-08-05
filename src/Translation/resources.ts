@@ -32,6 +32,15 @@ export function ucTranslation() {
     debugging: t("debugging"),
     unavailable: t("unavailable"),	
     responsiveDesignUnavailable: t("responsiveDesignUnavailable"),
+    hi:t("hi"),
+    contactUs:t("contactUs"),
+    experience:t("experience"),
+    my:t("my"),
+    novosit:t("novosit"),
+    upwork:t("upwork"),
+    workTypist:t("workTypist"),
+    phrasesOfTheDay:t("phrasesOfTheDay"),
+    technologiesUsed:t("technologiesUsed")
   };
   return { resources };
 }

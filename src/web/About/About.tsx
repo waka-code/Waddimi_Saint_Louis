@@ -23,9 +23,6 @@ const ProfessionalJourney = () => {
         marginTop: "100px",
       }}
     >
-      {/* <div data-aos="fade-down">
-        <span style={styles.descriptionH2}>{resources.IamLouis}</span>
-      </div> */}
       <PersonalProfileSection {...styles.aboutMe} />
       <WorkExperience
         workExperience={workExperience}
@@ -68,7 +65,7 @@ const PersonalProfileSection = ({
                 color: "#BA9797",
               }}
             >
-              Hi, Welcome
+              {resources.hi}
             </span>
             {resources.iAmAPassionate}
           </h2>
@@ -90,7 +87,7 @@ const PersonalProfileSection = ({
           <button
             style={{
               height: "40px",
-              width: "50%",
+              width: "60%",
               cursor: "pointer",
               fontWeight: "bold",
               letterSpacing: "4px",
@@ -100,16 +97,14 @@ const PersonalProfileSection = ({
               gap: "10px",
             }}
           >
-             <img
+            <img
               src={WhatsApp}
               alt="whatsapp"
               style={{
                 width: "20px",
-                height: "20px",
-                marginLeft: "10px",
               }}
             />
-            <span>CONTACT US</span>
+            <span>{resources.contactUs}</span>
           </button>
         </div>
       </div>
@@ -126,27 +121,28 @@ const WorkExperience = ({
   container: React.CSSProperties;
   workExperience: WorkExperienceProps;
 }) => {
+  const { resources } = ucTranslation();
+
   return (
-    <div style={{...container, display:"flex", flexDirection:"column", background:"#333333"}}>
-     <div style={{
-      paddingLeft:"110px",
-     }}> <h2
-     style={{
-       fontSize:"2.5rem",
-     }}>My <span style={{
-        color:"#BA9797",
-        fontSize:"2.5rem",
-        fontWeight:"bold",
-      }}>Experience</span></h2>
+    <div style={{ ...container, display: "flex", flexDirection: "column", background: "#333333" }}>
+      <div style={{
+        paddingLeft: "80px",
+      }}> <h2
+        style={{
+          fontSize: "2.5rem",
+          fontWeight: "bold", letterSpacing: "5px"
+        }}>{resources.my} <span style={{
+          color: "#BA9797",
+        }}>{resources.experience}</span></h2>
       </div>
-       <div style={container}>
-      <CardsWorkExperience
-        jobDescriptions={{}}
-        aboutWorkExperienceStyle={box}
-        isAboutSection={true}
-        workExperienceDetails={workExperience}
-      />
-    </div>
+      <div style={container}>
+        <CardsWorkExperience
+          jobDescriptions={{}}
+          aboutWorkExperienceStyle={box}
+          isAboutSection={true}
+          workExperienceDetails={workExperience}
+        />
+      </div>
     </div>
   );
 };
@@ -160,10 +156,25 @@ const ProfileShowcase = ({
   img,
   picture,
 }: ImageStyleProps) => {
+  const { resources } = ucTranslation();
+
   return (
     <div>
       <div style={container}>
-        <div style={divContainer}>
+        <div style={{ ...divContainer, position: "relative" }}>
+          <div style={{
+            position: "absolute",
+            left: "-100px",
+            top: "30px",
+            background: "#333333",
+            padding: "10px",
+            borderRadius: "10px",
+          }}>
+            <span style={{
+              fontWeight: "bold", letterSpacing: "5px",
+              fontSize: "1.5rem"
+            }}>{resources.phrasesOfTheDay}</span>
+          </div>
           <CardsWorkExperience
             jobDescriptions={jobDescriptions}
             aboutWorkExperienceStyle={undefined}

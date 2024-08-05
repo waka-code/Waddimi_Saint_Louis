@@ -27,5 +27,15 @@
   "theArtOfDebugging": "El Arte de la Depuración",
   "debugging": "La depuración es dos veces más difícil que escribir el código en primer lugar. Por lo tanto, si escribes el código de la manera más inteligente posible, por definición, no eres lo suficientemente inteligente como para depurarl o.",
   "unavailable": "Descripción del proyecto no disponible",
-  "responsiveDesignUnavailable": "El diseño responsivo aún no está disponible..."
+  "responsiveDesignUnavailable": "El diseño responsivo aún no está disponible...",
+
+  "hi": "Hola, bienvenido",
+  "contactUs": "CONTACTO",
+  "my": "Mi",
+  "experience":"experiencia",
+  "novosit": "Desarrollar y mantener aplicaciones web completas, desde la interfaz de usuario hasta la lógica de servidor y la gestión de bases de datos.",
+  "upwork": "Maquetación web, transformar diseños en páginas web funcionales y atractivas, asegurando una buena experiencia de usuario en diferentes dispositivos y navegadores.",
+  "workTypist": "Me encargaba de la introducción y gestión de datos, garantizando que la información fuera precisa, organizada y accesible.",
+  "phrasesOfTheDay": "Frases del día...",
+  "technologiesUsed":"Tecnologías utilizadas"
 }

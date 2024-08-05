@@ -27,15 +27,21 @@ const WorkExperienceItem: React.FC<{
         <span style={{
           fontSize: "1.5rem",
           fontWeight: "bold",
-          color:"#BA9797"
+          color: "#BA9797"
         }}>{description.jobTitle}</span>
         <span>{description.stack}</span>
         <p>{description.description}</p>
       </div>
     ) : (
-      <div>
+      <div style={{
+        padding: "10px"
+      }}>
         <h3>{description.position}</h3>
-        <span>{description?.title}</span>
+        <span style={{
+          color: "#BA9797",
+          fontSize:"1.5rem"
+        }}>{description?.title}</span>
+        <hr/>
         <p>{description?.description}</p>
       </div>
     )}

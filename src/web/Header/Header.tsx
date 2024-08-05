@@ -2,7 +2,8 @@ import { ucI18n } from "../../Translation/hook";
 import { ucHeaderStyles } from "./HeaderStyles";
 import { ucHeader } from "./hook";
 import { PiWarningDiamondDuotone } from "react-icons/pi";
-
+import spain from "../../assets/svg/spain.svg";
+import us from "../../assets/svg/us.svg";
 import { ucTestData } from "../mockup/mockup";
 
 export const Header = () => {
@@ -102,10 +103,10 @@ export const Header = () => {
       <div
         style={{
           position: "fixed",
-          top: "1.5%",
+          top: "3.5%",
           right: "0%",
           height: "100px",
-          gap: "5px",
+          gap: "15px",
           display: "flex",
           flexDirection: "column",
           width: "80px",
@@ -119,12 +120,10 @@ export const Header = () => {
                 handleLanguage(i);
               }}
               style={{
-                backgroundColor: language === i ? "#141414" : "#E8DEDE",
-                color: language === i ? "#BA9797" : "#141414",
-                border: language === i ? "1px solid #BA9797" : "none",
+                backgroundColor: language === i ? "#141414" : "#949494",
+                border: "none",
                 width: "80px",
                 maxHeight: "120px",
-                fontSize: "25px",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
@@ -135,15 +134,11 @@ export const Header = () => {
                 borderTopLeftRadius: "100px",
               }}
             >
-              <text
-                style={{
-                  fontSize: "16px",
-                  fontWeight: "bold",
-                  letterSpacing: "1px",
-                }}
-              >
-                {i}
-              </text>
+                <img
+                  key={idx}
+                  src={i === "es" ? spain : us}
+                  width={20}
+                />
             </button>
           );
         })}

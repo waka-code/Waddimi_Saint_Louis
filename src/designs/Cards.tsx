@@ -6,7 +6,7 @@ const CardItem: React.FC<{
   pictureMeDivImg: React.CSSProperties;
 }> = ({ pictureMeDivImg, pictureMeDiv, imgSrc }) => (
   <div style={pictureMeDiv}>
-    <img src={imgSrc} alt="my" style={pictureMeDivImg} />
+    <img src={imgSrc} alt="my" style={pictureMeDivImg}/>
     <div className="PictureMeDescription">
       <span className="PictureMeDescriptionSpan">Aquí va la descripción</span>
     </div>
