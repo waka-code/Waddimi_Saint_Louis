@@ -10,12 +10,17 @@ export default function Skills() {
     SkillsIcons,
     SkillsImg,
   } = ucSkillsStyles();
-  const { gridTemplateColumns, handleGrid, resources, SkillSetOverview } = ucSkill();
+  const { gridTemplateColumns, handleGrid, resources, SkillSetOverview } =
+    ucSkill();
   return (
     <div style={SkillsContainer}>
       <div style={SkillsContainerDiv}>
         <div>
-          <h2 style={{color:"white", fontWeight:"bold", letterSpacing:"5px"}}>{resources.skills}</h2>
+          <h2
+            style={{ color: "white", fontWeight: "bold", letterSpacing: "5px" }}
+          >
+            {resources.skills}
+          </h2>
         </div>
         <IconsGrid ochange={handleGrid} isPortfolio={false} />
       </div>
@@ -37,25 +42,34 @@ export default function Skills() {
               key={index}
               style={{
                 ...SkillsIcons,
-                height:"500px",
+                height: "500px",
               }}
             >
-              <span style={{color:"white", fontWeight:"bold", letterSpacing:"5px"}}>{title}</span>
+              <span
+                style={{
+                  color: "white",
+                  fontWeight: "bold",
+                  letterSpacing: "5px",
+                }}
+              >
+                {title}
+              </span>
               <hr />
-              <div style={{
-                display: "grid",
-                gridTemplateColumns: "repeat(4, 1fr)",
-                gap: "10px",
-                width: "fit-content",
-                flex:"wrap",
-              }}>
+              <div
+                style={{
+                  display: "grid",
+                  gridTemplateColumns: "repeat(4, 1fr)",
+                  gap: "10px",
+                  width: "fit-content",
+                  flex: "wrap",
+                }}
+              >
                 {icon.technologies.map((i, index) => (
                   <div key={index} style={SkillsImg}>
-                    <img src={i} width={60} height={50} />
+                    <img src={i} width={60} height={50} alt={"technologies"} />
                   </div>
                 ))}
               </div>
-
             </div>
           );
         })}

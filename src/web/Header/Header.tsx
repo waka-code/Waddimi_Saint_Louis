@@ -79,6 +79,7 @@ export const Header = () => {
                   src={i.icon}
                   width={25}
                   title={i.name}
+                  alt={i.name}
                   style={{
                     cursor: "pointer",
                   }}
@@ -115,6 +116,7 @@ export const Header = () => {
         {lang.map((i, idx) => {
           return (
             <button
+              aria-label={"language"}
               key={idx}
               onClick={() => {
                 handleLanguage(i);
@@ -132,15 +134,11 @@ export const Header = () => {
                 transition: "background-color 0.5s ease, color 0.5s ease",
                 borderBottomLeftRadius: "100px",
                 borderTopLeftRadius: "100px",
-                position:"relative",
-                borderRight:"none"
+                position: "relative",
+                borderRight: "none",
               }}
             >
-              <img
-                key={idx}
-                src={i === "es" ? spain : us}
-                width={20}
-              />
+              <img key={idx} src={i === "es" ? spain : us} width={20} alt={i} />
             </button>
           );
         })}

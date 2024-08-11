@@ -85,6 +85,7 @@ const PersonalProfileSection = ({
           }}
         >
           <button
+            aria-label={resources.contactUs}
             style={{
               height: "40px",
               width: "60%",
@@ -124,16 +125,36 @@ const WorkExperience = ({
   const { resources } = ucTranslation();
 
   return (
-    <div style={{ ...container, display: "flex", flexDirection: "column", background: "#333333" }}>
-      <div style={{
-        paddingLeft: "80px",
-      }}> <h2
+    <div
+      style={{
+        ...container,
+        display: "flex",
+        flexDirection: "column",
+        background: "#333333",
+      }}
+    >
+      <div
         style={{
-          fontSize: "2.5rem",
-          fontWeight: "bold", letterSpacing: "5px"
-        }}>{resources.my} <span style={{
-          color: "#BA9797",
-        }}>{resources.experience}</span></h2>
+          paddingLeft: "80px",
+        }}
+      >
+        {" "}
+        <h2
+          style={{
+            fontSize: "2.5rem",
+            fontWeight: "bold",
+            letterSpacing: "5px",
+          }}
+        >
+          {resources.my}{" "}
+          <span
+            style={{
+              color: "#BA9797",
+            }}
+          >
+            {resources.experience}
+          </span>
+        </h2>
       </div>
       <div style={container}>
         <CardsWorkExperience
@@ -162,18 +183,25 @@ const ProfileShowcase = ({
     <div>
       <div style={container}>
         <div style={{ ...divContainer, position: "relative" }}>
-          <div style={{
-            position: "absolute",
-            left: "-100px",
-            top: "30px",
-            background: "#333333",
-            padding: "10px",
-            borderRadius: "10px",
-          }}>
-            <span style={{
-              fontWeight: "bold", letterSpacing: "5px",
-              fontSize: "1.5rem"
-            }}>{resources.phrasesOfTheDay}</span>
+          <div
+            style={{
+              position: "absolute",
+              left: "-100px",
+              top: "30px",
+              background: "#333333",
+              padding: "10px",
+              borderRadius: "10px",
+            }}
+          >
+            <span
+              style={{
+                fontWeight: "bold",
+                letterSpacing: "5px",
+                fontSize: "1.5rem",
+              }}
+            >
+              {resources.phrasesOfTheDay}
+            </span>
           </div>
           <CardsWorkExperience
             jobDescriptions={jobDescriptions}

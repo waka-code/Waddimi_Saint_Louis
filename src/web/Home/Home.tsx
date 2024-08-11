@@ -16,7 +16,6 @@ const PortfolioOverview = () => {
   const { resources } = ucTranslation();
   const { isTabletDevice } = ucMediaQuery();
 
-
   return (
     <div style={divContainer}>
       <div style={divStyles}>
@@ -45,7 +44,7 @@ const PortfolioOverview = () => {
                 rel="noreferrer"
                 className="Cv"
               >
-                <button className="btnCv">
+                <button className="btnCv" aria-label={"btnCv"}>
                   {i.title === "CV" ? resources.viwCv : resources.downloadCv}
                 </button>
               </a>
@@ -136,7 +135,16 @@ export const DynamicProjectGrid: React.FC<ProjectDisplayProps> = ({
               }}
             >
               <div>
-                <h4 style={{ color: "white", fontSize: "20px", fontWeight: "bold", letterSpacing: "4px" }}>{resources.technologiesUsed}</h4>
+                <h4
+                  style={{
+                    color: "white",
+                    fontSize: "20px",
+                    fontWeight: "bold",
+                    letterSpacing: "4px",
+                  }}
+                >
+                  {resources.technologiesUsed}
+                </h4>
               </div>
 
               <span>Title</span>
@@ -144,6 +152,7 @@ export const DynamicProjectGrid: React.FC<ProjectDisplayProps> = ({
               <button
                 style={size}
                 disabled={true}
+                aria-label={"github"}
                 onClickCapture={() =>
                   alert(
                     "Aun no tengo proyecto que mostrar, puedes visitar mi github... Waddimi Saint Louis"
@@ -155,6 +164,7 @@ export const DynamicProjectGrid: React.FC<ProjectDisplayProps> = ({
               <button
                 style={size}
                 disabled={true}
+                aria-label={resources.viewCode}
                 onClickCapture={() =>
                   alert(
                     "Aun no tengo proyecto que mostrar, puedes visitar mi github... Waddimi Saint Louis"
