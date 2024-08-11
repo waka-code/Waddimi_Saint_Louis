@@ -7,6 +7,7 @@ import { useMemo } from "react";
 import { ucTestData } from "../mockup/mockup";
 import { ucTranslation } from "../../Translation/resources";
 import { ucMediaQuery } from "../../designs/mediaQuery/hook";
+import henry from "../../assets/img/henry.png";
 
 const PortfolioOverview = () => {
   const { divStyles, h1Styles, h2Styles, pStyles, divContainer } =

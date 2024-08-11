@@ -34,7 +34,7 @@ const WorkExperienceItem: React.FC<{
       </div>
     ) : (
       <div style={{
-        padding: "10px"
+        padding : "10px"
       }}>
         <h3>{description.position}</h3>
         <span style={{

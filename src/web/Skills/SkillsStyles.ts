@@ -16,7 +16,7 @@ export function ucSkillsStyles() {
     },
     SkillsIcons: {
       padding: "30px",
-      boxShadow: "0 5px 8px 0 #141414",
+      boxShadow: "0 2px 4px 0 #141414",
       width: "360px",
       background:"#828282",
       borderRadius:"10px"

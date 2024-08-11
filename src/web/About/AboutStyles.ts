@@ -13,13 +13,14 @@ export function AboutStyles() {
         alignItems: "center",
         padding: "20px",
         width: "40%",
-        gap: "30px",	
+        gap: "30px",
       },
       imgContainer: {
         height: "600px",
         borderRadius: "10px",
         overflow: "hidden",
-        boxShadow: "0 5px 8px 0 #141414",
+        boxShadow: "0 2px 4px 0 #141414",
+
         border: "2px solid #141414",
         position: "relative" as "relative",
       },
@@ -33,7 +34,8 @@ export function AboutStyles() {
       box: {
         padding: "10px",
         borderRadius: "10px",
-        boxShadow: "0 5px 8px 0 #141414",
+        boxShadow: "0 2px 4px 0 #141414",
+
         border: "2px solid #141414",
         backgroundColor: "#141414",
         width: "350px",
@@ -66,7 +68,7 @@ export function AboutStyles() {
         borderRadius: "10px",
         padding: "80px",
         backgroundColor: "#141414",
-        boxShadow: "0 5px 8px 0 #141414",
+        boxShadow: "0 2px 4px 0 #141414",
       },
       picture: {
         display: "flex",
@@ -78,7 +80,8 @@ export function AboutStyles() {
       div: {
         borderRadius: "10px",
         overflow: "hidden",
-        boxShadow: "0 5px 8px 0 #141414",
+        boxShadow: "0 2px 4px 0 #141414",
+
         border: "2px solid #141414",
         position: "relative" as "relative",
       },

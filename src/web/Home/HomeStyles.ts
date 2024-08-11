@@ -52,7 +52,7 @@ export const ucProjectDisplayStyles = () => {
   const projectGrid: React.CSSProperties = {
     borderRadius: "10px",
     transition: "all 0.6s ease",
-    boxShadow: "0 5px 8px 0 #141414",
+    boxShadow: "0 2px 4px 0 #141414",
     border: "2px solid #141414",
     position: "relative",
     display: "flex",
