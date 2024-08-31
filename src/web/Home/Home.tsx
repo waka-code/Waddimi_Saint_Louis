@@ -3,7 +3,7 @@ import { ucHomeStyles, ucProjectDisplayStyles } from "./HomeStyles";
 import { ucScrollHover } from "../../designs/hook";
 import { ProjectDisplayProps, ucHome } from "./hook";
 import { ucPortfolioStyle } from "../Portfolio/PortfolioStyle";
-import { useMemo } from "react";
+import { CSSProperties, useMemo } from "react";
 import { ucTestData } from "../mockup/mockup";
 import { ucTranslation } from "../../Translation/resources";
 import { ucMediaQuery } from "../../designs/mediaQuery/hook";
@@ -14,17 +14,59 @@ const PortfolioOverview = () => {
   const { projects, projectsInProgres } = ucHome();
   const { CurriculumVitae } = ucTestData();
   const { resources } = ucTranslation();
-  const { isTabletDevice } = ucMediaQuery();
+  const { isMobileDevice, isTabletDevice, isLaptop, isDesktop } =
+    ucMediaQuery();
+
+    const responsiveHeaderFontSize = useMemo(() => {
+      const deviceFontSizes = {
+        isMobileDevice: "30px",
+        isTabletDevice: "50px",
+        isLaptop: "70px",
+        isDesktop: "90px",
+      };
+    
+      const fontSize = Object.entries(deviceFontSizes).find(
+        ([device]) => eval(device)
+      )?.[1] || h1Styles.fontSize;
+    
+      return { ...h1Styles, fontSize };
+    }, [isMobileDevice, isTabletDevice, isLaptop, isDesktop, h1Styles]);
+
+    const FontSize = useMemo(() => {
+      const deviceFontSizes = {
+        isMobileDevice: "30px",
+        isTabletDevice: "30px",
+        isLaptop: "30px",
+        isDesktop: "40px",
+      };
+    
+      const fontSize = Object.entries(deviceFontSizes).find(
+        ([device]) => eval(device)
+      )?.[1] || h2Styles.fontSize;
+    
+      return { ...h2Styles, fontSize };
+    }, [isMobileDevice, isTabletDevice, isLaptop, isDesktop, h1Styles]);
+
+    const parrafeFontSize = useMemo(() => {
+      const deviceFontSizes = {
+        isMobileDevice: "15px",
+        isTabletDevice: "15px",
+        isLaptop: "15px",
+        isDesktop: "15px",
+      };
+    
+      const fontSize = Object.entries(deviceFontSizes).find(
+        ([device]) => eval(device)
+      )?.[1] || pStyles.fontSize;
+    
+      return { ...pStyles, fontSize };
+    }, [isMobileDevice, isTabletDevice, isLaptop, isDesktop, h1Styles]);
 
   return (
     <div style={divContainer}>
       <div style={divStyles}>
-        <h1 style={h1Styles}>
-          <span
-            style={isTabletDevice ? { color: "#BA9797" } : { color: "white" }}
-          >
-            {resources.hiIamLouis}
-          </span>
+        <h1 style={responsiveHeaderFontSize}>
+          <span style={{ color: "#BA9797" }}>{resources.hiIamLouis}</span>
           <span>{resources.systemEngineer}</span>
         </h1>
         <div
@@ -52,8 +94,8 @@ const PortfolioOverview = () => {
           })}
         </div>
 
-        <h2 style={h2Styles}>{resources.welcomeAWakacode}</h2>
-        <p style={pStyles}>{resources.wakaCode}</p>
+        <h2 style={FontSize}>{resources.welcomeAWakacode}</h2>
+        <p style={parrafeFontSize}>{resources.wakaCode}</p>
         <DynamicProjectGrid
           projects={projects}
           gridTemplateColumns={undefined}
@@ -85,12 +127,14 @@ export const DynamicProjectGrid: React.FC<ProjectDisplayProps> = ({
   const { portfolioStyle, portfolioGrid, portfolioImg, imgStyle } =
     ucPortfolioStyle();
 
+
   const { hoverCards } = ucScrollHover({
     ulScroolYStyle: undefined,
     ulStyle: undefined,
     zoomIn: "zoom-in",
     zoomInDown: "zoom-in-down",
   });
+
 
   const width = useMemo(() => {
     return gridTemplateColumns === "repeat(3, 1fr)" ? "450px" : "550px";

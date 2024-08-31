@@ -153,7 +153,7 @@ export const ucTestData = () => {
     Novosit: {
       jobTitle: "Fullstack developer",
       jobDuration: "2023 - Actual",
-      stack: "React, Mongo C#, Typescript, Node, Docker",
+      stack: "React, Mongo, C#, Typescript, Node, Docker",
       description: resources.novosit
     },
     Upwork: {

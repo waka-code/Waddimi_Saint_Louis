@@ -19,7 +19,7 @@ export const ucHeaderStyles = () => {
 
   const ulScroolYStyle: React.CSSProperties = {
     position: "fixed",
-    maxWidth: "38%",
+    maxWidth: "60%",
     top: 0,
     zIndex: 1000,
     transition: "0.5s",
