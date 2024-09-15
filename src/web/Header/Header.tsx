@@ -72,7 +72,7 @@ export const Header = () => {
 
         {social.map((i, idx) => {
           return (
-            <div className="social">
+            <div className="social" key={idx}>
               <a href={i.url} target="_blank" rel="noreferrer">
                 <img
                   key={idx}

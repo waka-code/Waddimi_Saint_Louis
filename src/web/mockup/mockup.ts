@@ -4,6 +4,8 @@ import waddyImg from "../../assets/img/waddyImg.png";
 import WaddimiSaintLouisCv_ from "../../cv/WaddimiSaintLouisCv_.pdf";
 import { ucTranslation } from "../../Translation/resources";
 import noDisponible from "../../assets/img/noDisponible.png";
+import  CompanyNamePNG from "../../assets/img/CompanyNamePNG.png";
+import inventarios from "../../assets/img/inventarios.png"; 
 
 import bootstrap from "../../assets/svg/bootstrap.svg";
 import dotnet from "../../assets/svg/dotnet.svg";
@@ -51,20 +53,40 @@ export const ucTestData = () => {
 
   const projects: ProjectProps[] = [
     {
-      url: "/",
-      img: noDisponible,
+      url: "https://waka-code.github.io/WebForceExamen/",
+      urlCode: "https://github.com/waka-code/WebForceExamen",
+      img: CompanyNamePNG,
+      technologiesUsed: ["Html", "Css"],
+      Title: "Web Force Examen",
+      description: "layout",
+      isVideo: false
+    },
+    {
+      url: "https://www.youtube.com/watch?v=osnWdZEGVVI",
+      urlCode: "https://github.com/waka-code/sistemaDeInventario",
+      img: inventarios,
+      technologiesUsed: ["C#", "SQL"],
+      Title: "Sistema de inventarios",
+      description: "sistema de inventarios",
+      isVideo: true
     },
     {
       url: "/",
+      urlCode: "/",
       img: noDisponible,
+      technologiesUsed: [],
+      Title: "",
+      description: "",
+      isVideo: false
     },
     {
       url: "/",
+      urlCode: "/",
       img: noDisponible,
-    },
-    {
-      url: "/",
-      img: noDisponible,
+      technologiesUsed: [],
+      Title: "",
+      description: "",
+      isVideo: false
     },
   ];
 
@@ -72,10 +94,18 @@ export const ucTestData = () => {
     {
       url: "/SinRutas",
       img: noDisponible,
+      technologiesUsed: [],
+      Title: "",
+      description: "",
+      isVideo: false
     },
     {
       url: "/SinRutas",
       img: noDisponible,
+      technologiesUsed: [],
+      Title: "",
+      description: "",
+      isVideo: false
     },
   ];
   //footer
@@ -176,28 +206,54 @@ export const ucTestData = () => {
   };
   const portfolio: ProjectProps[] = [
     {
-      url: "/portfolio",
+      url: "https://waka-code.github.io/WebForceExamen/",
+      urlCode: "https://github.com/waka-code/WebForceExamen",
+      img: CompanyNamePNG,
+      technologiesUsed: ["Html", "Css"],
+      Title: "Web Force Examen",
+      description: "layout",
+      isVideo: false
+    },
+    {
+      url: "https://www.youtube.com/watch?v=osnWdZEGVVI",
+      urlCode: "https://github.com/waka-code/sistemaDeInventario",
+      img: inventarios,
+      technologiesUsed: ["C#", "SQL"],
+      Title: "Sistema de inventarios",
+      description: "sistema de inventarios",
+      isVideo: true
+    },
+    {
+      url: "/",
       img: noDisponible,
+      technologiesUsed: [],
+      Title: "",
+      description: "",
+      isVideo: false
+    },
+    {
+      url: "/",
+      img: noDisponible,
+      technologiesUsed: [],
+      Title: "",
+      description: "",
+      isVideo: false
+    },
+    {
+      url: "/",
+      img: noDisponible,
+      technologiesUsed: [],
+      Title: "",
+      description: "",
+      isVideo: false
     },
     {
       url: "/portfolio",
       img: noDisponible,
-    },
-    {
-      url: "/portfolio",
-      img: noDisponible,
-    },
-    {
-      url: "/portfolio",
-      img: noDisponible,
-    },
-    {
-      url: "/portfolio",
-      img: noDisponible,
-    },
-    {
-      url: "/portfolio",
-      img: noDisponible,
+      technologiesUsed: [],
+      Title: "",
+      description: "",
+      isVideo: false
     },
   ];
 

@@ -86,7 +86,7 @@ export const ucProjectDisplayStyles = () => {
             return false;
         }
       }
-    )?.[1] || { width: "100%", height: "40vh" };
+    )?.[1] || { width: "100%", height: "35vh" };
   
     return currentDevice;
   }, [isMobileDevice, isTabletDevice, isLaptop, isDesktop]);
@@ -95,9 +95,9 @@ export const ucProjectDisplayStyles = () => {
     display: "grid",
     gridTemplateColumns: responsiveGridTemplateColumns,
     gridTemplateRows: "repeat(1, 1fr)",
-    gap: "4rem",
+    gap: "3rem",
     cursor: "pointer",
-    padding: "100px 0 40px 0",
+    padding: "100px 30px",
     alignItems: "center",
    };
 
@@ -109,7 +109,8 @@ export const ucProjectDisplayStyles = () => {
     position: "relative",
     display: "flex",
     width:widthAndHeight.width,
-    height:widthAndHeight.height
+    height:widthAndHeight.height,
+    overflow: "hidden",
   };
 
   return { divStyles, projectGrid };

@@ -1,4 +1,11 @@
-import React, { useCallback, useEffect, useMemo, useState } from "react";
+import React, {
+  CSSProperties,
+  useCallback,
+  useEffect,
+  useMemo,
+  useState,
+} from "react";
+import { ucMediaQuery } from "./mediaQuery/hook";
 type ucHeaderProps = {
   ulScroolYStyle: React.CSSProperties | undefined;
   ulStyle: React.CSSProperties | undefined;
@@ -81,4 +88,41 @@ export const ucIconsGrid = ({
   const grid = isPortfolio ? grids.portfolioGrid : grids.skilsGrid;
 
   return { ...grids, grid, handleClick };
+};
+
+export const ucResponsiveStyle = ({
+  mobile,
+  tablet,
+  laptop,
+  desktop,
+  baseStyle,
+}: {
+  mobile: string,
+  tablet: string,
+  laptop: string,
+  desktop: string,
+  baseStyle: any;
+}) => {
+  const { isMobileDevice, isTabletDevice, isLaptop, isDesktop } = ucMediaQuery();
+
+  const deviceStyles = {
+    isMobileDevice: mobile,
+    isTabletDevice: tablet,
+    isLaptop: laptop,
+    isDesktop: desktop,
+  };
+
+  // Arreglar el error
+  const responsiveStyle = Object.entries(deviceStyles).find(
+    ([device, _]) => {
+      if (device === 'isMobileDevice' && isMobileDevice) return true;
+      if (device === 'isTabletDevice' && isTabletDevice) return true;
+      if (device === 'isLaptop' && isLaptop) return true;
+      if (device === 'isDesktop' && isDesktop) return true;
+    }
+  )?.[1] || baseStyle;
+
+  console.log(responsiveStyle);
+
+  return { ...baseStyle, ...responsiveStyle };
 };

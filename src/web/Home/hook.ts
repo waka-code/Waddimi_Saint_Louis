@@ -2,7 +2,12 @@ import { ucTestData } from "../mockup/mockup";
 
 export type ProjectProps = {
   url: string;
+  urlCode?: string;
   img: any;
+  technologiesUsed: string[];
+  Title:string;
+  description: string;
+  isVideo: boolean;	
 };
 
 export type ProjectDisplayProps = {

@@ -17,16 +17,15 @@ export function ucPortfolioStyle() {
     boxShadow: "0 2px 4px 0 #141414",
     position: "relative",
     border: "2px solid #141414",
-    height: "40vh",
+    height: "100%",
     display: "flex",
     alignItems: "center",
   };
 
   const portfolioImg: React.CSSProperties = {
     width: "100%",
-    height: "auto",
     borderRadius: "10px",
-    objectFit: "cover",
+    height: "100%",
   };
 
   const portfolioContainer: React.CSSProperties = { padding: "60px 0 5px 0" };
@@ -39,7 +38,12 @@ export function ucPortfolioStyle() {
     alignItems: "center",
   };
 
-  const imgStyle: React.CSSProperties = {borderRadius: "10px", objectFit: "cover"}
+  const imgStyle: React.CSSProperties = {
+    borderRadius: "10px",
+    objectFit: "cover",
+    width: "100%",
+    height: "auto",
+  };
 
   return {
     portfolioStyle,
@@ -47,6 +51,6 @@ export function ucPortfolioStyle() {
     portfolioImg,
     portfolioContainer,
     portfolioDiv,
-    imgStyle
+    imgStyle,
   };
 }
