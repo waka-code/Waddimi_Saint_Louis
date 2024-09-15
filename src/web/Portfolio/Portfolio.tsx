@@ -8,7 +8,7 @@ import { ucTranslation } from "../../Translation/resources";
 
 export default function CreativeWorksDisplay() {
   const { portfolio } = ucTestData();
-  const { portfolioContainer, portfolioDiv } = ucPortfolioStyle();
+  const {  portfolioDiv } = ucPortfolioStyle();
   const { portfolioGrid } = ucIconsGrid({ ochange: () => {} });
   const [gridTemplateColumns, setGridTemplateColumns] =
     useState<string>(portfolioGrid);
@@ -20,7 +20,7 @@ export default function CreativeWorksDisplay() {
     [setGridTemplateColumns]
   );
   return (
-    <div style={portfolioContainer}>
+    <div>
       <div style={portfolioDiv}>
         <h2 style={{color:"white", fontWeight:"bold", letterSpacing:"5px"}}>{resources.portfolio}</h2>
         <IconsGrid ochange={handleGrid} isPortfolio={true} />

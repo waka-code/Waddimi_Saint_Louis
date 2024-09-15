@@ -47,9 +47,9 @@ export type ImageStyleProps = {
   picture: React.CSSProperties;
 };
 
-export type AboutStyle = {
-  container: React.CSSProperties;
-  description: React.CSSProperties;
-  imgContainer: React.CSSProperties;
-  img: React.CSSProperties;
-};
+// export type AboutStyle = {
+//   container: React.CSSProperties;
+//   description: React.CSSProperties;
+//   imgContainer: React.CSSProperties;
+//   img: React.CSSProperties;
+// };

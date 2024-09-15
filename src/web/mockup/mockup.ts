@@ -4,8 +4,9 @@ import waddyImg from "../../assets/img/waddyImg.png";
 import WaddimiSaintLouisCv_ from "../../cv/WaddimiSaintLouisCv_.pdf";
 import { ucTranslation } from "../../Translation/resources";
 import noDisponible from "../../assets/img/noDisponible.png";
-import  CompanyNamePNG from "../../assets/img/CompanyNamePNG.png";
-import inventarios from "../../assets/img/inventarios.png"; 
+import CompanyNamePNG from "../../assets/img/CompanyNamePNG.png";
+import inventarios from "../../assets/img/inventarios.png";
+import wanimeJK from "../../assets/img/wanime.png";
 
 import bootstrap from "../../assets/svg/bootstrap.svg";
 import dotnet from "../../assets/svg/dotnet.svg";
@@ -59,7 +60,7 @@ export const ucTestData = () => {
       technologiesUsed: ["Html", "Css"],
       Title: "Web Force Examen",
       description: "layout",
-      isVideo: false
+      isVideo: false,
     },
     {
       url: "https://www.youtube.com/watch?v=osnWdZEGVVI",
@@ -68,7 +69,16 @@ export const ucTestData = () => {
       technologiesUsed: ["C#", "SQL"],
       Title: "Sistema de inventarios",
       description: "sistema de inventarios",
-      isVideo: true
+      isVideo: true,
+    },
+    {
+      url: "https://www.tiktok.com/@wakacode/video/7219738950980619525?is_from_webapp=1&sender_device=pc&web_id=7351955148874761733",
+      img: wanimeJK,
+      urlCode:"https://github.com/waka-code/ClaseA",
+      technologiesUsed: ["React", "Typescript", "Css", "Node", "Express", "Mongo"],
+      Title: "wanime",
+      description: "",
+      isVideo: true,
     },
     {
       url: "/",
@@ -77,16 +87,7 @@ export const ucTestData = () => {
       technologiesUsed: [],
       Title: "",
       description: "",
-      isVideo: false
-    },
-    {
-      url: "/",
-      urlCode: "/",
-      img: noDisponible,
-      technologiesUsed: [],
-      Title: "",
-      description: "",
-      isVideo: false
+      isVideo: false,
     },
   ];
 
@@ -97,7 +98,7 @@ export const ucTestData = () => {
       technologiesUsed: [],
       Title: "",
       description: "",
-      isVideo: false
+      isVideo: false,
     },
     {
       url: "/SinRutas",
@@ -105,7 +106,7 @@ export const ucTestData = () => {
       technologiesUsed: [],
       Title: "",
       description: "",
-      isVideo: false
+      isVideo: false,
     },
   ];
   //footer
@@ -184,13 +185,13 @@ export const ucTestData = () => {
       jobTitle: "Fullstack developer",
       jobDuration: "2023 - Actual",
       stack: "React, Mongo, C#, Typescript, Node, Docker",
-      description: resources.novosit
+      description: resources.novosit,
     },
     Upwork: {
       jobTitle: "Freelancer",
       jobDuration: "2020 - 2023",
       stack: "Html, Css, Javascript",
-      description: resources.upwork
+      description: resources.upwork,
     },
     Digitador: {
       jobTitle: resources.typist,
@@ -212,7 +213,7 @@ export const ucTestData = () => {
       technologiesUsed: ["Html", "Css"],
       Title: "Web Force Examen",
       description: "layout",
-      isVideo: false
+      isVideo: false,
     },
     {
       url: "https://www.youtube.com/watch?v=osnWdZEGVVI",
@@ -221,7 +222,16 @@ export const ucTestData = () => {
       technologiesUsed: ["C#", "SQL"],
       Title: "Sistema de inventarios",
       description: "sistema de inventarios",
-      isVideo: true
+      isVideo: true,
+    },
+    {
+      url: "https://www.tiktok.com/@wakacode/video/7219738950980619525?is_from_webapp=1&sender_device=pc&web_id=7351955148874761733",
+      img: wanimeJK,
+      urlCode:"https://github.com/waka-code/ClaseA",
+      technologiesUsed: ["React", "Typescript", "Css", "Node", "Express", "Mongo"],
+      Title: "wanime",
+      description: "",
+      isVideo: true,
     },
     {
       url: "/",
@@ -229,7 +239,7 @@ export const ucTestData = () => {
       technologiesUsed: [],
       Title: "",
       description: "",
-      isVideo: false
+      isVideo: false,
     },
     {
       url: "/",
@@ -237,15 +247,7 @@ export const ucTestData = () => {
       technologiesUsed: [],
       Title: "",
       description: "",
-      isVideo: false
-    },
-    {
-      url: "/",
-      img: noDisponible,
-      technologiesUsed: [],
-      Title: "",
-      description: "",
-      isVideo: false
+      isVideo: false,
     },
     {
       url: "/portfolio",
@@ -253,7 +255,7 @@ export const ucTestData = () => {
       technologiesUsed: [],
       Title: "",
       description: "",
-      isVideo: false
+      isVideo: false,
     },
   ];
 
@@ -303,6 +305,9 @@ export const ucTestData = () => {
       url: WaddimiSaintLouisCv_,
     },
   ];
+
+  const whatsapp =
+    "https://api.whatsapp.com/send/?phone=18295041112&text&type=phone_number&app_absent=0";
   return {
     imageFiles,
     social,
@@ -313,5 +318,6 @@ export const ucTestData = () => {
     portfolio,
     SkillSetOverview,
     CurriculumVitae,
+    whatsapp,
   };
 };

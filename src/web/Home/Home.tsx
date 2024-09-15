@@ -1,5 +1,5 @@
 import { ucHomeStyles, ucProjectDisplayStyles } from "./HomeStyles";
-import { ucResponsiveStyle, ucScrollHover } from "../../designs/hook";
+import { ucScrollHover } from "../../designs/hook";
 import { ProjectDisplayProps, ucHome } from "./hook";
 import { ucPortfolioStyle } from "../Portfolio/PortfolioStyle";
 import { useMemo } from "react";
@@ -16,7 +16,7 @@ const PortfolioOverview = () => {
   return (
     <div style={divContainer}>
       <div style={divStyles}>
-      <h1 style={h1Styles}>
+        <h1 style={h1Styles}>
           <span style={{ color: "#BA9797" }}>{resources.hiIamLouis}</span>
           <span>{resources.systemEngineer}</span>
         </h1>
@@ -28,7 +28,7 @@ const PortfolioOverview = () => {
             alignItems: "center",
           }}
         >
-          {CurriculumVitae.map((i,idx) => {
+          {CurriculumVitae.map((i, idx) => {
             return (
               <a
                 href={i.url}
@@ -127,16 +127,14 @@ export const DynamicProjectGrid: React.FC<ProjectDisplayProps> = ({
                   flexDirection: "column",
                   justifyContent: "center",
                   alignItems: "center",
-                  gap: "10px",
                 }}
               >
                 <div>
                   <h4
                     style={{
                       color: "white",
-                      fontSize: "20px",
+                      fontSize: "18px",
                       fontWeight: "bold",
-                      letterSpacing: "4px",
                     }}
                   >
                     {technologiesUsed.length > 0
@@ -149,18 +147,28 @@ export const DynamicProjectGrid: React.FC<ProjectDisplayProps> = ({
                 <p>
                   {description.length > 0 ? description : resources.unavailable}
                 </p>
-                <ButtonLink
-                  href={project.url}
-                  label={project.isVideo ? "Video" : "GitHub Pages"}
-                  size={size}
-                  disabled={disabled}
-                />
-                <ButtonLink
-                  href={project.urlCode}
-                  label={resources.viewCode}
-                  size={size}
-                  disabled={disabled}
-                />
+                <div
+                  style={{
+                    display: "flex",
+                    gap: "5px",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    flexDirection: "column",
+                  }}
+                >
+                  <ButtonLink
+                    href={project.url}
+                    label={project.isVideo ? "Video" : "GitHub Pages"}
+                    size={size}
+                    disabled={disabled}
+                  />
+                  <ButtonLink
+                    href={project.urlCode}
+                    label={resources.viewCode}
+                    size={size}
+                    disabled={disabled}
+                  />
+                </div>
               </div>
             </div>
           </div>
@@ -185,17 +193,12 @@ const ButtonLink = ({
   };
   disabled: boolean;
 }) => (
-  <a
-    href={href}
-    target="_blank"
-    rel="noreferrer"
-    style={{
-      color: "white",
-      textDecoration: "none",
-    }}
+  <button
+    style={size}
+    disabled={disabled}
+    aria-label={label}
+    onClick={() => window.open(href, "_blank")}
   >
-    <button style={size} disabled={disabled} aria-label={label}>
-      {label}
-    </button>
-  </a>
+    {label}
+  </button>
 );

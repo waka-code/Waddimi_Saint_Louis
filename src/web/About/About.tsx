@@ -4,8 +4,9 @@ import { ucTestData } from "../mockup/mockup";
 import { Cards } from "../../designs/Cards";
 import { CardsWorkExperience } from "../../designs/CardsWorkExperience";
 import { ucTranslation } from "../../Translation/resources";
-import { AboutStyle, JobDetails, ImageStyleProps } from "../Types/Types";
+import { JobDetails, ImageStyleProps } from "../Types/Types";
 import WhatsApp from "../../assets/svg/WhatsApp.svg";
+import { useNavigate } from "react-router-dom";
 
 type WorkExperienceProps = {
   Novosit: JobDetails;
@@ -15,7 +16,7 @@ type WorkExperienceProps = {
 
 const ProfessionalJourney = () => {
   const { styles } = AboutStyles();
-  const { jobDescriptions, workExperience, imageFiles } = ucTestData();
+  const { jobDescriptions, workExperience, imageFiles, whatsapp } = ucTestData();
 
   return (
     <div
@@ -23,7 +24,7 @@ const ProfessionalJourney = () => {
         marginTop: "100px",
       }}
     >
-      <PersonalProfileSection {...styles.aboutMe} />
+      <PersonalProfileSection {...styles.aboutMe} whatsapp={whatsapp}/>
       <WorkExperience
         workExperience={workExperience}
         {...styles.workExperience}
@@ -43,7 +44,14 @@ const PersonalProfileSection = ({
   description,
   imgContainer,
   img,
-}: AboutStyle) => {
+  whatsapp
+}: {
+  container: React.CSSProperties;
+  description: React.CSSProperties;
+  imgContainer: React.CSSProperties;
+  img: React.CSSProperties;
+  whatsapp: string;
+}) => {
   const { resources } = ucTranslation();
 
   return (
@@ -81,11 +89,13 @@ const PersonalProfileSection = ({
         </div>
         <div
           style={{
-            width: "75%",
+            width: "100%",
+            marginLeft: "100px",
           }}
         >
           <button
             aria-label={resources.contactUs}
+            onClick={() => window.open(whatsapp, '_blank')}
             style={{
               height: "40px",
               width: "60%",
