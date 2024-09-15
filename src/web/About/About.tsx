@@ -6,7 +6,6 @@ import { CardsWorkExperience } from "../../designs/CardsWorkExperience";
 import { ucTranslation } from "../../Translation/resources";
 import { JobDetails, ImageStyleProps } from "../Types/Types";
 import WhatsApp from "../../assets/svg/WhatsApp.svg";
-import { useNavigate } from "react-router-dom";
 
 type WorkExperienceProps = {
   Novosit: JobDetails;
