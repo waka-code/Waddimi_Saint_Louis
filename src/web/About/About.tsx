@@ -10,7 +10,7 @@ import WhatsApp from "../../assets/svg/WhatsApp.svg";
 type WorkExperienceProps = {
   Novosit: JobDetails;
   Upwork: JobDetails;
-  Digitador: JobDetails;
+  IMarket: JobDetails;
 };
 
 const ProfessionalJourney = () => {

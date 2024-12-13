@@ -34,6 +34,8 @@ import postgresql from "../../assets/svg/postgresql.svg";
 import cv from "../../assets/svg/cv.svg";
 import instagram from "../../assets/svg/instagram.svg";
 import linkedin from "../../assets/svg/linkedin.svg";
+import angular from "../../assets/svg/angular.svg";
+
 
 type Icon = {
   title: string;
@@ -162,6 +164,12 @@ export const ucTestData = () => {
   };
 
   const workExperience: {
+    IMarket: {
+      jobTitle: string;
+      jobDuration: string;
+      stack: string;
+      description: string;
+    };
     Novosit: {
       jobTitle: string;
       jobDuration: string;
@@ -174,13 +182,19 @@ export const ucTestData = () => {
       stack: string;
       description: string;
     };
-    Digitador: {
-      jobTitle: string;
-      jobDuration: string;
-      stack: string;
-      description: string;
-    };
+    // Digitador: {
+    //   jobTitle: string;
+    //   jobDuration: string;
+    //   stack: string;
+    //   description: string;
+    // };
   } = {
+    IMarket: {
+      jobTitle: "Ssr Fullstack developer",
+      jobDuration: "2024 - Actual",
+      stack: "Angular 18, Tailwind, Typecript, C#, Postgresql",
+      description: resources.novosit,
+    },
     Novosit: {
       jobTitle: "Fullstack developer",
       jobDuration: "2023 - Actual",
@@ -192,13 +206,13 @@ export const ucTestData = () => {
       jobDuration: "2020 - 2023",
       stack: "Html, Css, Javascript",
       description: resources.upwork,
-    },
-    Digitador: {
-      jobTitle: resources.typist,
-      jobDuration: "2019 - 2020",
-      stack: "Excel, Word, Powerpoint",
-      description: resources.workTypist,
-    },
+    }
+    // Digitador: {
+    //   jobTitle: resources.typist,
+    //   jobDuration: "2019 - 2020",
+    //   stack: "Excel, Word, Powerpoint",
+    //   description: resources.workTypist,
+    // },
   };
 
   const imageFiles = {
@@ -273,6 +287,7 @@ export const ucTestData = () => {
           sass,
           bootstrap,
           tailwind,
+          angular 
         ],
       },
       {

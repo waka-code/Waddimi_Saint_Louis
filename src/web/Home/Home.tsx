@@ -32,7 +32,7 @@ const PortfolioOverview = () => {
             return (
               <a
                 href={i.url}
-                download="WaddimiSaintLouisEs"
+                download="WaddimiSaintLouisCv_.pdf"
                 target="_blank"
                 rel="noreferrer"
                 className="Cv"
