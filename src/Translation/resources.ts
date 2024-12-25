@@ -5,7 +5,7 @@ export function ucTranslation() {
   const resources = {
     systemEngineer: t("systemEngineer"),
     hiIamLouis: t("hiIamLouis"),
-    viwCv: t("viwCv"),
+    viewCv: t("viwCv"),
     downloadCv: t("downloadCv"),
     welcomeAWakacode: t("welcomeAWakacode"),
     inProgress: t("inProgress"),

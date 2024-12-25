@@ -31,7 +31,6 @@ import ts from "../../assets/svg/ts.svg";
 import sql from "../../assets/svg/sql.svg";
 import tailwind from "../../assets/svg/tailwind.svg";
 import postgresql from "../../assets/svg/postgresql.svg";
-import cv from "../../assets/svg/cv.svg";
 import instagram from "../../assets/svg/instagram.svg";
 import linkedin from "../../assets/svg/linkedin.svg";
 import angular from "../../assets/svg/angular.svg";
@@ -47,7 +46,7 @@ type IconObject = {
 };
 
 const CV =
-  "https://www.canva.com/design/DAGDDUviYeU/fWYu7GRVNwJXmOLzgwPaRg/view?utm_content=DAGDDUviYeU&utm_campaign=designshare&utm_medium=link&utm_source=editor";
+  "https://www.canva.com/design/DAGaT4ag5gM/0EJTQrP5wQM7_M9kSvHtTw/view?utm_content=DAGaT4ag5gM&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=he3183005da";
 
 export const ucTestData = () => {
   const { resources } = ucTranslation();
@@ -127,12 +126,7 @@ export const ucTestData = () => {
       icon: instagram,
       name: "Instagram",
       url: "https://www.instagram.com/saint_louis29/",
-    },
-    {
-      icon: cv,
-      name: "Curriculum Vitae",
-      url: CV,
-    },
+    }
   ];
 
   const jobDescriptions: {
@@ -190,7 +184,7 @@ export const ucTestData = () => {
     // };
   } = {
     IMarket: {
-      jobTitle: "Ssr Fullstack developer",
+      jobTitle: "Ssr Fullstack dev - (Partial Project)",
       jobDuration: "2024 - Actual",
       stack: "Angular 18, Tailwind, Typecript, C#, Postgresql",
       description: resources.novosit,
@@ -204,7 +198,7 @@ export const ucTestData = () => {
     Upwork: {
       jobTitle: "Freelancer",
       jobDuration: "2020 - 2023",
-      stack: "Html, Css, Javascript",
+      stack: "Html, Css, TS, React, Express, Angular, etc.",
       description: resources.upwork,
     }
     // Digitador: {
@@ -241,7 +235,7 @@ export const ucTestData = () => {
     {
       url: "https://www.tiktok.com/@wakacode/video/7219738950980619525?is_from_webapp=1&sender_device=pc&web_id=7351955148874761733",
       img: wanimeJK,
-      urlCode:"https://github.com/waka-code/ClaseA",
+      urlCode:"https://github.com/waka-code/wanime",
       technologiesUsed: ["React", "Typescript", "Css", "Node", "Express", "Mongo"],
       Title: "wanime",
       description: "",

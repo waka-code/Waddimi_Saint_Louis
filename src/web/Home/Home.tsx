@@ -32,14 +32,14 @@ const PortfolioOverview = () => {
             return (
               <a
                 href={i.url}
-                download="WaddimiSaintLouisCv_.pdf"
+                download="WaddimiSaintLouisCV"
                 target="_blank"
                 rel="noreferrer"
                 className="Cv"
                 key={idx}
               >
                 <button className="btnCv" aria-label={"btnCv"}>
-                  {i.title === "CV" ? resources.viwCv : resources.downloadCv}
+                  {i.title === "CV" ? resources.viewCv : resources.downloadCv}
                 </button>
               </a>
             );
