@@ -5,6 +5,7 @@ import { ucPortfolioStyle } from "../Portfolio/PortfolioStyle";
 import { useMemo } from "react";
 import { ucTestData } from "../mockup/mockup";
 import { ucTranslation } from "../../Translation/resources";
+import { color } from "framer-motion";
 
 const PortfolioOverview = () => {
   const { divStyles, h1Styles, h2Styles, pStyles, divContainer } =
@@ -92,7 +93,6 @@ export const DynamicProjectGrid: React.FC<ProjectDisplayProps> = ({
   const size = {
     width: "200px",
     height: "40px",
-    cursor: "pointer",
   };
 
   return (
@@ -189,15 +189,29 @@ const ButtonLink = ({
   size: {
     width: string;
     height: string;
-    cursor: string;
   };
   disabled: boolean;
 }) => (
   <button
-    style={size}
+    style={
+      {
+        ...size,
+        backgroundColor: "#242424",
+        color: "white",
+        border: "none",
+        borderRadius: "5px",
+        cursor: disabled ? "not-allowed" : "pointer",
+      }
+    }
     disabled={disabled}
     aria-label={label}
     onClick={() => window.open(href, "_blank")}
+    onMouseEnter={(e) => {
+        e.currentTarget.style.backgroundColor = "#3a3a3a";
+    }}
+    onMouseLeave={(e) => {
+        e.currentTarget.style.backgroundColor = "#242424";
+    }}
   >
     {label}
   </button>

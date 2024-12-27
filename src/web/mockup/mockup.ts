@@ -94,7 +94,7 @@ export const ucTestData = () => {
 
   const projectsInProgres: ProjectProps[] = [
     {
-      url: "/SinRutas",
+      url: "/",
       img: noDisponible,
       technologiesUsed: [],
       Title: "",
@@ -102,7 +102,7 @@ export const ucTestData = () => {
       isVideo: false,
     },
     {
-      url: "/SinRutas",
+      url: "/",
       img: noDisponible,
       technologiesUsed: [],
       Title: "",

@@ -142,6 +142,7 @@ li:hover {
   cursor: pointer;
   font-size: 20px;
   padding: 5px;
+  color: white;
 }
 
 .Cv {
@@ -171,4 +172,13 @@ li:hover {
   transform: scale(1.05);
   box-shadow: 0 1px 4px 0 #141414;
   border-radius: 5px;
+}
+
+.btnProjects {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 20px;
+  padding: 5px;
+  color: white;
 }
